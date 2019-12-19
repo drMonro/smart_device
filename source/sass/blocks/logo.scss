@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__svg {
+  width: 52px;
+  height: 52px;
+}
+
+.logo__text-wrapper {
+  margin: 0;
+  & > * {
+    display: block;
+  }
+}
+
+.logo__title {
+  font-family: "roboto-condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.logo__description {
+  font-family: "roboto", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: lowercase;
+  color: #788891;
+}
