@@ -1,3 +1,8 @@
-h1 {
-  color: red;
-}
+@import "global/variables";
+@import "global/normalize";
+@import "global/global";
+@import "blocks/button";
+@import "blocks/page-header";
+@import "blocks/page-footer";
+@import "blocks/index/teaser";
+

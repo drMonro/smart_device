@@ -1,0 +1,28 @@
+.button {
+  background-color: $accent;
+  color: #ffffff;
+  font-size: 14px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 42px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  min-height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button--more-items {
+    padding: 10px 20px;
+  }
+}

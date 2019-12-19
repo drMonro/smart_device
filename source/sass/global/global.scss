@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "ptmono";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/ptmono-regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto-condensed";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/robotocondensed-bold.woff2") format("woff2"), url("../fonts/robotocondensed-bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/roboto-medium.woff2") format("woff2"), url("../fonts/roboto-medium.woff") format("woff");
+  font-display: swap;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "ptmono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
