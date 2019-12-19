@@ -1,15 +1,16 @@
 .button {
-  background-color: $accent;
+  background-color: $blue;
   color: #ffffff;
   font-size: 14px;
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
-  padding: 10px 42px;
+  padding: 10px 15px;
   text-align: center;
   text-transform: uppercase;
   border: none;
   min-height: 40px;
+  border-radius: 5px;
 
   &:hover,
   &:focus {
