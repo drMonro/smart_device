@@ -59,7 +59,10 @@ input[type="radio"].visually-hidden {
 }
 
 .main {
-  z-index: 0;
-  position: absolute;
-  top: 0;
+  min-height: 878px;
+}
+
+.index-body {
+  display: flex;
+  flex-direction: column;
 }
