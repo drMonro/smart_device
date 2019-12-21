@@ -68,15 +68,45 @@ input[type="radio"].visually-hidden {
 }
 
 .main {
-  //min-height: 878px;
-  //z-index: 0;
-  //position: absolute;
-  top: 0;
+  position: relative;
+  overflow: hidden;
+  margin-top: -85px;
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 872px;
+    height: 873px;
+    background-image: url(../img/advantages-big-triangle.svg);
+    right: 489px;
+    top: 1026px;
+  }
 }
 
 .index-body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }
+
+@media (max-width: $desktop-width) {
+  .main {
+    margin-top: -75px;
+    &::before {
+      right: -314px;
+      top: 778px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main {
+    &::before {
+      right: -432px;
+      top: 1244px;
+    }
+  }
+}
+
+
+

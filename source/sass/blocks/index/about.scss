@@ -1,0 +1,95 @@
+.about__wrapper {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1194px;
+  padding-left: 192px;
+  padding-right: 15px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 317px;
+    background-image: url("../img/year-2005-desktop.png");
+    background-size: cover;
+    left: -18px;
+    top: 6px;
+  }
+}
+
+.about__title {
+  display: block;
+  font-family: "roboto-condensed", "Arial", sans-serif;
+  font-weight: normal;
+  color: #666666;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 22px;
+}
+
+.about__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.about__button {
+  width: 180px;
+  background-color: transparent;
+  border: 1px solid $blue;
+  color: $blue;
+  margin-top: 19px;
+  margin-bottom: 8px;
+  padding: 14px 15px;
+
+  &:hover {
+    background-color: $blue;
+    color: #ffffff;
+
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .about__wrapper {
+    padding-left: 210px;
+    padding-right: 25px;
+
+    &::before {
+      background-image: url(../img/year-2005-tablet.png);
+      width: 244px;
+      height: 362px;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .about__title {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin-bottom: 27px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .about__wrapper {
+    padding-left: 14px;
+    padding-right: 6px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .about__title {
+    font-size: 28px;
+    margin-bottom: 22px;
+  }
+
+  .about__text {
+    padding-left: 3px;
+    margin-bottom: 40px;
+  }
+}

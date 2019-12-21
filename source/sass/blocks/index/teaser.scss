@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
   background-color: $accent-dark;
-  min-height: 878px;
+  min-height: 964px;
   z-index: 0;
   margin-top: -85px;
   background-image: url(../img/teaser_background-desktop.png);
@@ -11,10 +11,8 @@
 }
 
 .teaser__wrapper {
-  padding-top: 313px;
+  padding-top: 398px;
   padding-left: 13%;
-
-
 }
 
 .teaser__title {
@@ -39,6 +37,10 @@
   letter-spacing: 0.05em;
 }
 
+.teaser__button-mobile-title {
+  display: none;
+}
+
 .teaser__text-wrapper {
   width: 718px;
   position: relative;
@@ -60,7 +62,7 @@
 .teaser__image-wrapper {
   position: absolute;
   right: 9.2%;
-  top: 258px;
+  top: 342px;
 
   &::before {
     position: absolute;
@@ -101,14 +103,13 @@
 
 @media (max-width: $desktop-width) {
   .teaser {
-    min-height: 698px;
+    min-height: 774px;
     background-image: url(../img/teaser-background-tablet.png);
-    background-size: contain;
     background-position-y: 14px;
   }
 
   .teaser__wrapper {
-    padding-top: 200px;
+    padding-top: 274px;
     padding-left: 11.5%;
   }
 
@@ -129,7 +130,7 @@
     line-height: 156.8%;
     padding-left: 50px;
     padding-right: 330px;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
 
     &::before {
       width: 33px;
@@ -144,7 +145,7 @@
 
   .teaser__image-wrapper {
     right: 0;
-    top: 126px;
+    top: 200px;
 
     &:before {
       top: -152px;
@@ -163,25 +164,59 @@
 @media (max-width: $tablet-width) {
 
   .teaser {
-    min-height: 648px;
+    min-height: 752px;
     background-image: url(../img/teaser-background-mobile.png);
-    background-size: contain;
-    background-position-y: 14px;
+    background-position-y: 30px;
   }
 
   .teaser__wrapper {
-    padding-left: 2.5%;
+    padding-left: 4.7%;
+    padding-top: 390px;
+  }
+
+  .teaser__text-wrapper {
+    width: auto;
   }
 
   .teaser__title {
     font-size: 40px;
     line-height: 47px;
     letter-spacing: 0.07em;
+    margin-bottom: 29px;
   }
 
   .teaser__title-description {
     font-size: 16px;
     width: 245px;
+    margin-bottom: 42px;
+  }
+
+  .teaser__image {
+    width: 294px;
+  }
+
+  .teaser__image-wrapper {
+    top: 197px;
+
+    &:before {
+      top: -138px;
+      left: 126px;
+      width: 505.02px;
+      height: 482.92px;
+    }
+  }
+
+  .teaser__button {
+    margin-left: 3px;
+    width: 94%;
+  }
+
+  .teaser__button-main-title {
+    display: none;
+  }
+
+  .teaser__button-mobile-title {
+    display: inline;
   }
 
 }

@@ -52,25 +52,106 @@
       <div class="teaser__text-wrapper">
         <h1 class="teaser__title">Печатные платы</h1>
         <p class="teaser__title-description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <button class="button teaser__button" type="button">Получить бесплатную консультацию</button>
+        <button class="button teaser__button" type="button">
+          <span class="teaser__button-main-title">Получить бесплатную консультацию</span>
+          <span class="teaser__button-mobile-title">Бесплатная консультация</span>
+        </button>
       </div>
       <div class="teaser__image-wrapper">
-
         <picture>
-<!--          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">-->
-<!--          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">-->
-<!--          <source type="image/webp" srcset="img/teaser-image-desktop@1x.webp 1x, img/teaser-image-desktop@2x.webp  2x">-->
-          <source media="(max-width: 767px)" srcset="img/teaser-image-mobile@1x.png 1x, img/teaser-image-mobile@2x.png 2x">
-
-          <source media="(max-width: 1023px)" srcset="img/teaser-image-tablet@1x.png 1x, img/teaser-image-tablet@2x.png 2x">
-          <img class="teaser__image" src="img/teaser-image-desktop@1x.png" width="705" height="515" srcset="img/teaser-image-desktop@2x.png 2x" alt="«Smart Device».Производство и продажа печатных плат">
+          <!--          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">-->
+          <!--          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">-->
+          <!--          <source type="image/webp" srcset="img/teaser-image-desktop@1x.webp 1x, img/teaser-image-desktop@2x.webp  2x">-->
+          <source media="(max-width: 767px)"
+                  srcset="img/teaser-image-mobile@1x.png 1x, img/teaser-image-mobile@2x.png 2x">
+          <source media="(max-width: 1023px)"
+                  srcset="img/teaser-image-tablet@1x.png 1x, img/teaser-image-tablet@2x.png 2x">
+          <img class="teaser__image" src="img/teaser-image-desktop@1x.png" width="705" height="515"
+               srcset="img/teaser-image-desktop@2x.png 2x" alt="«Smart Device».Производство и продажа печатных плат">
         </picture>
-
-<!--        <img class="teaser__image" src="img/teaser-image-desktop.png" width="705" height="515" alt="«Smart Device».Производство и продажа печатных плат">-->
       </div>
     </div>
-
   </section>
+
+  <section class="advantages">
+    <ul class="advantages__list advantages__list--top">
+      <li class="advantages__list-item">
+        <a class="advantages__list-item-link" href="#">
+          <svg class="advantages__list-svg" width="29" height="35">
+            <use xlink:href="#icon-stopwatch"></use>
+          </svg>
+          <span class="advantages__title">Оперативные сроки</span>
+          <p class="advantages__description">Усовершенствованная логистическая система позволяет нам просчитывать
+            стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+        </a>
+      </li>
+      <li class="advantages__list-item advantages__list-item--suppliers">
+        <a class="advantages__list-item-link" href="#">
+          <svg class="advantages__list-svg" width="35" height="35">
+            <use xlink:href="#icon-hired"></use>
+          </svg>
+          <span class="advantages__title">Крупные поставщики</span>
+          <p class="advantages__description">Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
+            CREE,
+            HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
+        </a>
+      </li>
+    </ul>
+    <ul class="advantages__list advantages__list--bottom">
+      <li class="advantages__list-item advantages__list-item--private">
+        <a class="advantages__list-item-link" href="#">
+          <svg class="advantages__list-svg" width="36" height="31">
+            <use xlink:href="#icon-detective"></use>
+          </svg>
+          <span class="advantages__title">Полная конфиденциальность</span>
+          <p class="advantages__description">По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+        </a>
+      </li>
+      <li class="advantages__list-item">
+        <a class="advantages__list-item-link" href="#">
+          <svg class="advantages__list-svg" width="35" height="35">
+            <use xlink:href="#icon-tag"></use>
+          </svg>
+          <span class="advantages__title">Персонализация стоимости</span>
+          <p class="advantages__description">Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
+            установить ту цену, которая Вас устраивает.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="about">
+    <div class="about__wrapper">
+      <span class="about__title">О компании</span>
+      <p class="about__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые
+        технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+      <p class="about__text">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+        REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
+        (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
+        светотехники России.</p>
+      <button class="button about__button">Подробнее</button>
+    </div>
+  </section>
+
+  <section class="goods">
+    <div class="goods__wrapper">
+      <p class="goods__title">Service Device предлагает следующие товары и услуги</p>
+
+      <ul class="goods__list">
+        <li class="goods__item">
+          <span class="goods__title">Производство  печатных плат</span>
+        </li>
+        <li class="goods__item">
+          <span class="goods__title">Монтаж печатных  плат</span>
+        </li>
+        <li class="goods__item">
+          <span class="goods__title">Комплектующие для светотехники</span>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
 </main>
 
 <footer class="page-footer">
