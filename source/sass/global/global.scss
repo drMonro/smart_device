@@ -8,6 +8,14 @@
 
 @font-face {
   font-family: "roboto-condensed";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto-condensed";
   font-weight: 700;
   font-style: normal;
   src: url("../fonts/robotocondensed-bold.woff2") format("woff2"), url("../fonts/robotocondensed-bold.woff") format("woff");
@@ -30,10 +38,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "ptmono", "Arial", sans-serif;
+  font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  background-color: #ffffff;
+  //background-color: $accent-dark;
 
   &::-webkit-scrollbar { width: 0; }
 }
@@ -59,10 +68,15 @@ input[type="radio"].visually-hidden {
 }
 
 .main {
-  min-height: 878px;
+  //min-height: 878px;
+  //z-index: 0;
+  //position: absolute;
+  top: 0;
 }
 
 .index-body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+
 }

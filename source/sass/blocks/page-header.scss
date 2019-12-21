@@ -30,6 +30,12 @@
   width: 662px;
 }
 
+.page-header__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .page-header__mail-link {
   padding-right: 88px;
   width: 135px;
@@ -41,8 +47,8 @@
 }
 
 .page-header__phone-link {
-  width: 218px;
-  padding-right: 38px;
+  width: 206px;
+  padding-right: 50px;
 
 }
 

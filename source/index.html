@@ -29,13 +29,13 @@
     </a>
 
     <div class="page-header__elements-wrapper">
-      <a class="page-header__mail-link" href="mailto:info@sd.ru">
+      <a class="page-header__link page-header__mail-link" href="mailto:info@sd.ru">
         <svg class="page-header__envelope-svg" width="19" height="14">
           <use xlink:href="#icon-envelope"></use>
         </svg>
         <span class="page-header__link-data">info@sd.ru</span>
       </a>
-      <a class="page-header__phone-link" href="tel:+74950005252">
+      <a class="page-header__link page-header__phone-link" href="tel:+74950005252">
         <svg class="page-header__phone-svg" width="18" height="18">
           <use xlink:href="#icon-phone-call"></use>
         </svg>
@@ -48,16 +48,38 @@
 
 <main class="main">
   <section class="teaser">
+    <div class="teaser__wrapper">
+      <div class="teaser__text-wrapper">
+        <h1 class="teaser__title">Печатные платы</h1>
+        <p class="teaser__title-description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <button class="button teaser__button" type="button">Получить бесплатную консультацию</button>
+      </div>
+      <div class="teaser__image-wrapper">
+
+        <picture>
+<!--          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">-->
+<!--          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">-->
+<!--          <source type="image/webp" srcset="img/teaser-image-desktop@1x.webp 1x, img/teaser-image-desktop@2x.webp  2x">-->
+          <source media="(max-width: 767px)" srcset="img/teaser-image-mobile@1x.png 1x, img/teaser-image-mobile@2x.png 2x">
+
+          <source media="(max-width: 1023px)" srcset="img/teaser-image-tablet@1x.png 1x, img/teaser-image-tablet@2x.png 2x">
+          <img class="teaser__image" src="img/teaser-image-desktop@1x.png" width="705" height="515" srcset="img/teaser-image-desktop@2x.png 2x" alt="«Smart Device».Производство и продажа печатных плат">
+        </picture>
+
+<!--        <img class="teaser__image" src="img/teaser-image-desktop.png" width="705" height="515" alt="«Smart Device».Производство и продажа печатных плат">-->
+      </div>
+    </div>
 
   </section>
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__top-wrapper">
-    <div class="page-footer__content-wrapper">
 
-      <div class="page-footer__top-left-part">
+  <div class="page-footer__wrapper">
 
+    <div class="page-footer__left-wrapper">
+
+      <div class="page-footer__left-part">
         <a class="logo page-footer__logo-wrapper">
           <svg class="logo__svg page-header__logo-svg" width="52" height="52">
             <use xlink:href="#icon-logo"></use>
@@ -71,21 +93,21 @@
         <ul class="page-footer__social-links">
           <li class="page-footer__social-link">
             <a>
-              <svg class="page-header__logo-svg" width="27" height="27">
+              <svg class="page-footer__logo-svg" width="27" height="27">
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="page-footer__social-link">
             <a>
-              <svg class="page-header__logo-svg" width="27" height="27">
+              <svg class="page-footer__logo-svg" width="27" height="27">
                 <use xlink:href="#icon-ok"></use>
               </svg>
             </a>
           </li>
           <li class="page-footer__social-link">
             <a>
-              <svg class="page-header__logo-svg" width="27" height="27">
+              <svg class="page-footer__logo-svg" width="27" height="27">
                 <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
@@ -93,57 +115,78 @@
         </ul>
       </div>
 
-      <div class="page-footer__top-middle-part">
-        <p class="page-footer__title">Разделы сайта</p>
-        <nav class="page-footer__navigation">
-          <ul>
-            <li>
-              <a href="#">О компании</a>
+      <div class="page-footer__left-bottom-part">
+        <span class="page-footer__text">Все права защищены</span>
+        <span class="page-footer__text">1999-2018 SD Service Devices</span>
+      </div>
+
+    </div>
+
+    <div class="page-footer__middle-wrapper">
+
+      <div class="accordion page-footer__middle-part">
+
+        <input id="accordion-1" type="checkbox" checked>
+
+        <label for="accordion-1" class="page-footer__title">Разделы сайта</label>
+        <article class="page-footer__navigation">
+          <ul class="page-footer__navigation-list">
+            <li class="page-footer__navigation-item page-footer__navigation-item--about">
+              <a href="#" class="page-footer__text">О компании</a>
             </li>
-            <li>
-              <a href="#">Продукты</a>
+            <li class="page-footer__navigation-item page-footer__navigation-item--parts">
+              <a href="#" class="page-footer__text">Комплектующие</a>
             </li>
-            <li>
-              <a href="#">Производство печатных плат</a>
+            <li class="page-footer__navigation-item page-footer__navigation-item--products">
+              <a href="#" class="page-footer__text">Продукты</a>
             </li>
-            <li>
-              <a href="#">Монтаж печатных плат</a>
+            <li class="page-footer__navigation-item page-footer__navigation-item--delivery">
+              <a href="#" class="page-footer__text">Доставка</a>
             </li>
-            <li>
-              <a href="#">Комплектующие</a>
+            <li class="page-footer__navigation-item page-footer__navigation-item--development">
+              <a href="#" class="page-footer__text">Производство печатных плат</a>
             </li>
-            <li>
-              <a href="#">Доставка</a>
+            <li class="page-footer__navigation-item page-footer__navigation-item--contacts">
+              <a href="#" class="page-footer__text">Контакты</a>
             </li>
-            <li>
-              <a href="#">Контакты</a>
+            <li class="page-footer__navigation-item page-footer__navigation-item--deploy">
+              <a href="#" class="page-footer__text">Монтаж печатных плат</a>
             </li>
           </ul>
-        </nav>
+        </article>
+
       </div>
 
-      <div class="page-footer__top-right-part">
-        <p class="page-footer__title">Наш офис</p>
-        <ul>
-          <li>г. Мытищи, Олимпийский проспект, д.10</li>
-          <li>+7 (495) 589-40-50</li>
-          <li>+7 (925) 003-87-67</li>
-          <li>+7 (926) 926-080-79</li>
-        </ul>
+      <div class="page-footer__middle-bottom-part">
+        <span class="page-footer__text">Условия конфиденциальности</span>
+      </div>
+
+
+    </div>
+
+    <div class="page-footer__right-wrapper">
+
+      <div class="accordion page-footer__right-part">
+
+        <input id="accordion-2" type="checkbox">
+
+        <label for="accordion-2" class="page-footer__title">Наш офис</label>
+        <article>
+          <ul class="page-footer__contacts-list">
+            <li class="page-footer__text">г. Мытищи, Олимпийский проспект, д.10</li>
+            <li class="page-footer__text">+7 (495) 589-40-50</li>
+            <li class="page-footer__text">+7 (925) 003-87-67</li>
+            <li class="page-footer__text">+7 (926) 926-080-79</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="page-footer__right-bottom-part">
+        <span class="page-footer__text">Developed by wow studio </span>
       </div>
     </div>
 
   </div>
-
-  <div class="page-footer__bottom-wrapper">
-    <div class="page-footer__content-wrapper">
-      <span>Все права защищены</span>
-      <span>1999-2018 SD Service Devices</span>
-      <span>Условия конфиденциальности</span>
-      <span>Developed by wow studio </span>
-    </div>
-  </div>
-
 </footer>
 
 </body>

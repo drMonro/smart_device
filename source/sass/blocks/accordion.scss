@@ -1,0 +1,44 @@
+.accordion input {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+
+  .accordion input + label:after,
+  .accordion input + label:hover:after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 10%;
+    transform: translateY(-50%);
+    top: 50%;
+    background-image: url("../img/plus.svg");
+    background-repeat: no-repeat;
+    //background-color: green;
+  }
+
+  .accordion input:checked + label:after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 10%;
+    transform: translateY(-50%);
+    top: 50%;
+    background-image: url("../img/minus.svg");
+    background-repeat: no-repeat;
+  }
+
+  .accordion article {
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0;
+    position: relative;
+    z-index: 10;
+    padding-top: 20px;
+  }
+  .accordion input:checked ~ article {
+    min-height: 170px;
+  }
+}
