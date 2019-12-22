@@ -5,8 +5,10 @@
   max-width: 1194px;
   padding-left: 192px;
   padding-right: 15px;
+  padding-bottom: 101px;
 
   &::before {
+    z-index: -1;
     position: absolute;
     content: "";
     width: 220px;
@@ -34,6 +36,10 @@
   line-height: 22px;
   color: #666666;
   margin-bottom: 20px;
+
+  & i {
+    display: none;
+  }
 }
 
 .about__button {
@@ -56,6 +62,8 @@
   .about__wrapper {
     padding-left: 210px;
     padding-right: 25px;
+    padding-bottom: 74px;
+
 
     &::before {
       background-image: url(../img/year-2005-tablet.png);
@@ -71,12 +79,38 @@
     line-height: 140.62%;
     margin-bottom: 27px;
   }
+
+  .about__text {
+    position: relative;
+    & i {
+      display: block;
+      position: absolute;
+      bottom: -2px;
+      right: -20px;
+    }
+    & span {
+      display: none;
+    }
+  }
+  .about__text--short {
+    display: inline;
+  }
+
+  .about__button {
+    display: block;
+    margin-top: 43px;
+    width: 34%;
+    margin-left: 3px;
+
+
+  }
 }
 
 @media (max-width: $tablet-width) {
   .about__wrapper {
     padding-left: 14px;
     padding-right: 6px;
+    padding-bottom: 56px;
 
     &::before {
       display: none;
@@ -90,6 +124,11 @@
 
   .about__text {
     padding-left: 3px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
+  }
+
+  .about__button {
+    margin-top: 30px;
+    width: 60%;
   }
 }

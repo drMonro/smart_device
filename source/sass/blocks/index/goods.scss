@@ -2,6 +2,157 @@
   background-color: $accent-dark;
 }
 
+.goods__title {
+  font-family: "roboto-condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+  margin-bottom: 53px;
+}
+
 .goods__wrapper {
+  //max-width: 1170px;
+  width: 60.9%;
+  margin: 0 auto;
+  padding-top: 87px;
+  padding-bottom: 127px;
+}
+
+.goods__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goods__item {
+  width: 31.6%;
+  max-height: 620px;
+}
+
+.goods__item {
+  //position: relative;
+  //overflow: hidden;
+  //width: 370px;
+}
+
+.goods__item-link {
+  position: relative;
+  height: 100%;
+  display: block;
+}
+
+.goods__image {
+  height: 100%;
+}
+
+.goods__item-title {
+  font-family: "roboto-condensed", "Arial", sans-serif;
+  font-weight: normal;
+  color: #ffffff;
+  position: absolute;
+  top: 8%;
+  left: 11.6%;
+  width: 155px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.goods__item-decoration {
+  position: absolute;
+  z-index: 3;
+  content: "";
+  width: 63px;
+  height: 63px;
+  width: 16.9%;
+  height: 10.1%;
+  background-color: $blue;
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  //background-size: 8px 4px;
+  background-position: center center;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: $desktop-width) {
+
+  .goods__wrapper {
+    width: 93.8%;
+    padding-top: 49px;
+    padding-bottom: 31px;
+  }
+
+  .goods__title {
+    font-size: 32px;
+    line-height: 140.62%;
+    padding-right: 15%;
+  }
+
+  .goods__list {
+    flex-wrap: wrap;
+  }
+
+  .goods__item {
+    width: 100%;
+    margin-bottom: 46px;
+    max-height: 256px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .goods__image {
+    width: 715px;
+    height: 256px;
+  }
+
+  .goods__item-link {
+    max-width: 715px;
+  }
+
+  .goods__item-title {
+    top: 15.3%;
+    left: 5.9%;
+  }
+
+  .goods__item-decoration {
+    width: 9%;
+    height: 25.2%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .goods__title {
+    font-size: 28px;
+    padding: 0;
+    margin-bottom: 43px;
+    padding-left: 10px;
+  }
+
+  .goods__wrapper {
+    width: 91%;
+    padding-bottom: 34px;
+
+  }
+
+  .goods__item {
+    margin-bottom: 30px;
+  }
+
+  .goods__item-title {
+    top: 8%;
+    left: 12%;
+  }
+
+  .goods__item-decoration {
+    width: 22%;
+  }
+
+  .goods__image {
+    width: 290px;
+    height: 256px;
+  }
 
 }

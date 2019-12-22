@@ -7,15 +7,6 @@
   margin-bottom: 73px;
 }
 
-.advantages__list-item-link {
-  display: block;
-  padding: 25px;
-  padding-top: 39.3px;
-  padding-left: 41.5px;
-  height: 100%;
-  box-sizing: border-box;
-}
-
 .advantages__list {
   display: flex;
   justify-content: space-between;
@@ -28,7 +19,6 @@
 .advantages__list-svg {
   fill: $blue;
   margin-bottom: 13px;
-
 }
 
 .advantages__list-item {
@@ -36,11 +26,17 @@
   width: 48.8%;
   box-sizing: border-box;
   border: 1px solid #EBEBEB;
-  border-left: 3px solid $blue;
+  position: relative;
+  display: block;
+  padding: 25px;
+  padding-top: 39.3px;
+  padding-left: 41.5px;
+  height: 100%;
   margin-bottom: 30px;
   background-color: #ffffff;
 
   &:hover {
+    cursor: pointer;
     background-color: $blue;
   }
 
@@ -49,6 +45,16 @@
   &:hover .advantages__description {
     color: #ffffff;
     fill: white;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: $blue;
   }
 }
 
@@ -71,7 +77,6 @@
 .advantages__list--top {
   position: relative;
   z-index: 1;
-
   &::before {
     position: absolute;
     z-index: -1;
@@ -86,10 +91,6 @@
 }
 
 .advantages__list--bottom {
-  //overflow: hidden;
-  //position: relative;
-  //z-index: 1;
-
   &::before {
     position: absolute;
     z-index: -1;
@@ -117,15 +118,15 @@
   }
 
   .advantages__list-item {
-    border-width: 2px;
     width: 47.8%;
-  }
-
-  .advantages__list-item-link {
     padding-top: 23px;
     padding-left: 25px;
     padding-right: 15px;
     padding-bottom: 20px;
+
+    &::before {
+      width: 2px;
+    }
   }
 
   .advantages__list-svg {
@@ -159,21 +160,18 @@
     padding-left: 14px;
     padding-right: 16px;
     padding-top: 37px;
-    margin-bottom: 36px;
+    margin-bottom: 38px;
+
   }
 
   .advantages__list-item {
     width: 100%;
-    margin-bottom: 17px;
+    margin-bottom: 19px;
+    padding-bottom: 25px;
   }
 
   .advantages__description {
     width: 100%;
-  }
-
-  .advantages__list-item-link {
-    padding-bottom: 25px;
-    //padding-right: 11px;
   }
 
   .advantages__title {
@@ -185,13 +183,18 @@
     margin-bottom: 6px;
   }
 
-  .advantages__list-item--suppliers .advantages__list-item-link {
+  .advantages__list-item--suppliers.advantages__list-item {
     padding-right: 0;
   }
 
-  .advantages__list-item--private .advantages__title {
-    margin-bottom: -8px;
+  .advantages__list-item--private {
+    & .advantages__title {
+      margin-bottom: -8px;
+    }
 
+    &.advantages__list-item {
+      padding-right: 23px;
+    }
   }
 
   .advantages__list--bottom .advantages__list-item {
@@ -203,6 +206,5 @@
     right: -118px;
     top: 651px;
   }
-
 
 }

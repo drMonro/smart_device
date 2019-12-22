@@ -1,0 +1,133 @@
+.form {
+  background-color: $blue;
+
+  & fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.form__wrapper {
+  width: 63.5%;
+  margin: 0 auto;
+  padding-top: 87px;
+  padding-bottom: 127px;
+  display: flex;
+}
+
+.form__image-wrapper {
+  width: 511px;
+  position: relative;
+  margin-top: 74px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 670.33px;
+    height: 641px;
+    top: -221px;
+    left: -175px;
+    background-image: url(../img/teaser-decoration.svg);
+    background-size: cover;
+    z-index: 0;
+  }
+}
+
+.form__submit-wrapper {
+  display: flex;
+}
+
+.form__image {
+  width: 511px;
+  position: relative;
+  z-index: 1;
+}
+
+.form__content {
+  position: relative;
+  z-index: 3;
+}
+
+.form__set input,
+.form__question-area {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+
+  &::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+
+  &:-moz-placeholder {
+    color: #ffffff;
+  }
+}
+
+.form__question-area {
+  width: 100%;
+  min-height: 154px;
+  margin-bottom: 30px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.form__submit {
+  width: 180px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  margin-top: 19px;
+  margin-bottom: 8px;
+  padding: 14px 15px;
+
+  &:hover {
+    background-color: #ffffff;
+    color: $blue;
+  }
+}
+
+.form__agree-wrapper {
+  position: relative;
+  padding-left: 50px;
+}
+
+.form__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: -5px;
+  border: 1px solid #ffffff;
+}
+
+.form__input-checkbox:checked + label::after {
+  content: " ";
+  position: absolute;
+  width: 7.5px;
+  height: 4.5px;
+  background-image: url("../img/chekbox-ok.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 5px;
+  top: 3px;
+}
+
+.form__title {
+  margin: 0;
+  padding: 0;
+  font-family: "roboto-condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.form__sub-title {
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
