@@ -100,23 +100,20 @@ input[type="radio"].visually-hidden {
 
 @media (max-width: $desktop-width) {
   .main {
-    margin-top: -75px;
-    &::after {
-      display: none;
-    }
-    &::before {
-      right: -40.9%;
-      top: 778px;
-    }
+    margin-top: -72px;
+    //&::after {
+    //  display: none;
+    //}
+    //&::before {
+    //  right: -40.9%;
+    //  top: 778px;
+    //}
   }
 }
 
 @media (max-width: $tablet-width) {
   .main {
-    &::before {
-      right: -135%;
-      top: 1319px;
-    }
+    margin-top: -55px;
   }
 }
 

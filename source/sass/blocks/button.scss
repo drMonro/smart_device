@@ -18,7 +18,9 @@
 
   &:hover,
   &:focus {
-    background-color: #5eaa2f;
+    background-color: $blue;
+    border-color: $blue;
+    color: #fff;
   }
 
   &:active {
@@ -26,8 +28,3 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .button--more-items {
-    padding: 10px 20px;
-  }
-}
