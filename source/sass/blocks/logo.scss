@@ -11,6 +11,7 @@
 
 .logo__text-wrapper {
   margin: 0;
+
   & > * {
     display: block;
   }
@@ -30,4 +31,55 @@
   line-height: 14px;
   text-transform: lowercase;
   color: #788891;
+}
+
+.logo--page-footer {
+  display: block;
+  width: 215px;
+  padding-bottom: 53px;
+}
+
+
+.logo--page-footer {
+  width: auto;
+  padding-bottom: 47px;
+
+  & .logo__svg {
+    margin-right: 6px;
+  }
+
+  & .logo__title {
+    color: #203C42;
+  }
+
+  & .logo__text-wrapper {
+    display: inline-block;
+    position: relative;
+    top: -6px;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .logo--page-footer {
+    padding: 0;
+  }
+
+}
+
+
+@media (max-width: $tablet-width) {
+
+  .logo--page-footer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo--page-footer .logo__text-wrapper {
+    position: static;
+  }
+
+  .logo--page-footer .logo__svg {
+    margin-right: 13px;
+  }
+
 }

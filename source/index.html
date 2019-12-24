@@ -198,7 +198,7 @@
       <div class="form__image-wrapper">
         <picture>
           <!--          <source type="image/webp" srcset="img/teaser-image-desktop@1x.webp 1x, img/teaser-image-desktop@2x.webp  2x">-->
-          <img class="form__image" src="img/airplane-desktop@1x.png" width="511" height="288"
+          <img class="form__image" src="img/airplane-desktop@1x.png" width="686" height="641"
                srcset="img/airplane-desktop@2x.png 2x" alt="«Smart Device».Производство и продажа печатных плат">
         </picture>
       </div>
@@ -208,12 +208,12 @@
         <p class="form__title">Остались вопросы? Задайте их нам!</p>
         <p class="form__sub-title">Мы проконсультируем Вас бесплатно</p>
 
-        <fieldset class="form__set">
+        <fieldset class="form__set form__set--contacts">
           <input type="text" name="name" class="form__input" placeholder="Имя">
           <input type="tel" name="phone-number" class="form__input form__input--phone" placeholder="Телефон">
         </fieldset>
 
-        <fieldset class="form__set">
+        <fieldset class="form__set form__set--question">
           <textarea name="question" class="form__question-area" placeholder="Ваш вопрос"></textarea>
         </fieldset>
 
@@ -241,12 +241,12 @@
     <div class="page-footer__left-wrapper">
 
       <div class="page-footer__left-part">
-        <a class="logo page-footer__logo-wrapper">
-          <svg class="logo__svg page-header__logo-svg" width="52" height="52">
+        <a class="logo logo--page-footer">
+          <svg class="logo__svg" width="52" height="52">
             <use xlink:href="#icon-logo"></use>
           </svg>
-          <p class="logo__text-wrapper page-footer__logo-text-wrapper">
-            <span class="logo__title">Smart Device</span>
+          <p class="logo__text-wrapper">
+            <span class="logo__title">Service Device</span>
             <span class="logo__description">Умные технологии</span>
           </p>
         </a>
@@ -278,7 +278,7 @@
 
       <div class="page-footer__left-bottom-part">
         <span class="page-footer__text">Все права защищены</span>
-        <span class="page-footer__text">1999-2018 SD Service Devices</span>
+        <span class="page-footer__text page-footer__text--established">1999-2018 SD Service Devices</span>
       </div>
 
     </div>
@@ -287,7 +287,7 @@
 
       <div class="accordion page-footer__middle-part">
 
-        <input id="accordion-1" type="checkbox" checked>
+        <input id="accordion-1" type="checkbox">
 
         <label for="accordion-1" class="page-footer__title">Разделы сайта</label>
         <article class="page-footer__navigation">
@@ -329,10 +329,10 @@
 
       <div class="accordion page-footer__right-part">
 
-        <input id="accordion-2" type="checkbox">
+        <input id="accordion-2" type="checkbox" checked>
 
         <label for="accordion-2" class="page-footer__title">Наш офис</label>
-        <article>
+        <article class="page-footer__contacts">
           <ul class="page-footer__contacts-list">
             <li class="page-footer__text">г. Мытищи, Олимпийский проспект, д.10</li>
             <li class="page-footer__text">+7 (495) 589-40-50</li>

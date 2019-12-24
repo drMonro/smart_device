@@ -9,51 +9,62 @@
 }
 
 .form__wrapper {
-  width: 63.5%;
+  height: 580px;
+  max-width: 1350px;
   margin: 0 auto;
-  padding-top: 87px;
-  padding-bottom: 127px;
+  padding-top: 91px;
   display: flex;
+
 }
 
 .form__image-wrapper {
-  width: 511px;
+  width: 686px;
   position: relative;
-  margin-top: 74px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 670.33px;
-    height: 641px;
-    top: -221px;
-    left: -175px;
-    background-image: url(../img/teaser-decoration.svg);
-    background-size: cover;
-    z-index: 0;
-  }
-}
-
-.form__submit-wrapper {
-  display: flex;
+  top: -25.8%;
+  left: -8.2%;
 }
 
 .form__image {
-  width: 511px;
+  width: 686px;
   position: relative;
   z-index: 1;
 }
 
 .form__content {
+  box-sizing: content-box;
+  padding-right: 1%;
+  width: 44.3%;
   position: relative;
   z-index: 3;
+
+  & > :not(:first-child) {
+    padding-left: 5px;
+  }
+}
+
+.form__title {
+  margin: 0;
+  padding: 0;
+  font-family: "roboto-condensed", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin-bottom: 11px;
+}
+
+.form__sub-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+
 }
 
 .form__set input,
 .form__question-area {
   border: none;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
+  padding: 16px;
+  width: 40%;
 
   &::-webkit-input-placeholder {
     color: #ffffff;
@@ -64,21 +75,34 @@
   }
 }
 
+.form__set input:first-child {
+  margin-right: 3.5%;
+}
+
 .form__question-area {
+  overflow: auto;
+  display: block;
   width: 100%;
   min-height: 154px;
-  margin-bottom: 30px;
+  margin-bottom: 44px;
   resize: none;
   box-sizing: border-box;
 }
 
+.form__submit-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+
 .form__submit {
-  width: 180px;
+  width: 270px;
+  margin-right: 37px;
   background-color: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
-  margin-top: 19px;
-  margin-bottom: 8px;
+  //margin-top: 19px;
+  //margin-bottom: 8px;
   padding: 14px 15px;
 
   &:hover {
@@ -89,16 +113,17 @@
 
 .form__agree-wrapper {
   position: relative;
-  padding-left: 50px;
+  padding-left: 32px;
+  width: 225px;
 }
 
 .form__input-checkbox + label::before {
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   left: 0;
-  top: -5px;
+  top: 8px;
   border: 1px solid #ffffff;
 }
 
@@ -110,22 +135,132 @@
   background-image: url("../img/chekbox-ok.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  left: 5px;
-  top: 3px;
+  left: 4px;
+  top: 13px;
 }
 
-.form__title {
-  margin: 0;
-  padding: 0;
-  font-family: "roboto-condensed", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 51px;
+.form__input-label {
+  font-size: 14px;
+  line-height: 16px;
 }
 
-.form__sub-title {
-  margin: 0;
-  padding: 0;
+.form__set.form__set--contacts {
+  margin-bottom: 40px;
+}
+
+.form__set.form__set--question {
+  width: 96%;
+  box-sizing: border-box;
+}
+
+.page-footer__contacts {
+  margin-top: 22px;
+}
+
+
+@media (max-width: $desktop-width) {
+
+  .form__image-wrapper {
+    display: none;
+  }
+
+  .form__wrapper {
+    height: 586px;
+    padding-left: 11.4%;
+    padding-top: 78px;
+  }
+
+  .form__title {
+    font-size: 32px;
+    line-height: 140.62%;
+    margin-bottom: 19px;
+  }
+
+  .form__sub-title {
+    margin-bottom: 54px;
+  }
+
+  .form__content {
+    padding: 0;
+    width: 100%;
+  }
+
+  .form__set input {
+    width: 36.6%;
+  }
+
+  .form__set.form__set--contacts {
+    margin-bottom: 42px;
+  }
+
+  .form__set.form__set--question {
+    width: 87.5%;
+  }
+
+  .form__submit {
+    width: 279px;
+    margin-right: 40px;
+  }
+
+  .form__question-area {
+    min-height: 161px;
+  }
+
+}
+
+
+@media (max-width: $tablet-width) {
+
+  .form__wrapper {
+    padding-left: 3.3%;
+    padding-right: 4.6%;
+    padding-top: 29px;
+    height: 611px;
+  }
+
+  .form__title {
+    font-size: 28px;
+    line-height: 140.62%;
+    margin-bottom: 14px;
+    padding-left: 4px;
+  }
+
+  .form__sub-title {
+    margin-bottom: 25px;
+  }
+
+  .form__set input:first-child {
+    margin-right: 0;
+    margin-bottom: 33px;
+  }
+
+  .form__set input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form__set.form__set--contacts {
+    margin-bottom: 31px;
+  }
+
+  .form__set.form__set--question {
+    width: 100%;
+  }
+
+  .form__question-area {
+    min-height: 105px;
+    margin-bottom: 30px;
+  }
+
+  .form__submit-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .form__submit {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px
+  }
 
 }
 
