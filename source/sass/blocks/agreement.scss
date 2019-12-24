@@ -1,0 +1,50 @@
+.agreement {
+  position: relative;
+  padding-left: 32px;
+  width: 225px;
+}
+
+.agreement__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 0;
+  top: 8px;
+  border: 1px solid #ffffff;
+}
+
+.agreement__input-checkbox:checked + label::after {
+  content: " ";
+  position: absolute;
+  width: 7.5px;
+  height: 4.5px;
+  background-image: url("../img/chekbox-ok.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: 4px;
+  top: 13px;
+}
+
+.agreement__input-label {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.agreement--modal {
+  width: 80%;
+  padding-left: 50px;
+  font-size: 14px;
+  line-height: 16px;
+  opacity: 0.8;
+
+  & .agreement__input-checkbox + label::before {
+    top: 2px;
+  }
+
+  & .agreement__input-checkbox:checked + label::after {
+    top: 7px;
+  }
+
+
+}
