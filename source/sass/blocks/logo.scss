@@ -33,16 +33,14 @@
   color: #788891;
 }
 
+
 .logo--page-footer {
+  width: 100%;
   display: block;
-  width: 215px;
-  padding-bottom: 53px;
-}
-
-
-.logo--page-footer {
-  width: auto;
+  max-width: 217px;
+  flex-wrap: wrap;
   padding-bottom: 47px;
+
 
   & .logo__svg {
     margin-right: 6px;
@@ -53,6 +51,8 @@
   }
 
   & .logo__text-wrapper {
+    //width: 206px;
+    width: 148px;
     display: inline-block;
     position: relative;
     top: -6px;
@@ -72,6 +72,7 @@
   .logo--page-footer {
     display: flex;
     justify-content: center;
+    max-width: 100%;
   }
 
   .logo--page-footer .logo__text-wrapper {

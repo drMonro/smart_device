@@ -40,7 +40,6 @@
   z-index: 3;
 
   & > :not(:first-child) {
-    padding-left: 5px;
     padding-left: 0.8%;
   }
 
@@ -206,7 +205,7 @@
 
   .form__set.form__set--question {
     min-width: 595px;
-    max-width: auto;
+    max-width: 100%;
   }
 
   .form__submit {
@@ -224,7 +223,7 @@
 @media (max-width: $tablet-width) {
 
   .form__content {
-    max-width: auto;
+
     min-width: auto;
   }
   .form__input-wrapper {
@@ -235,7 +234,7 @@
     padding-left: 3.3%;
     padding-right: 4.6%;
     padding-top: 29px;
-    height: 611px;
+    height: 610px;
   }
 
   .form__title {

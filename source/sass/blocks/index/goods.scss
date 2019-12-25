@@ -29,7 +29,8 @@
 
 .goods__item {
   height: auto;
-  width: 31.6%;
+  width: 31.4%;
+
 }
 
 .goods__item-link {
@@ -58,8 +59,6 @@
   position: absolute;
   z-index: 3;
   content: "";
-  width: 63px;
-  height: 63px;
   width: 16.9%;
   height: 10.1%;
   background-color: $blue;

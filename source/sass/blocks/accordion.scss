@@ -38,7 +38,7 @@
     background-repeat: no-repeat;
   }
 
-  .accordion article {
+  .accordion div {
     margin-top: -1px;
     overflow: hidden;
     //height: 0;
@@ -46,12 +46,12 @@
     z-index: 10;
     padding-top: 20px;
   }
-  .accordion input:checked ~ article {
+  .accordion input:checked ~ div {
     display: block;
     min-height: 156px;
   }
 
-  .accordion input ~ article {
+  .accordion input ~ div {
     display: none;
   }
 
