@@ -47,6 +47,32 @@
   }
 }
 
+.teaser__scroll-button {
+  width: 101px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  font-family: "ptmono", "Arial", sans-serif;
+  font-weight: normal;
+  text-transform: none;
+  font-size: 14px;
+  line-height: 16px;
+  transform: rotate(-90deg);
+  left: -5px;
+  top: 553px;
+  opacity: 0.5;
+  letter-spacing: normal;
+
+  &:hover,
+  &:focus {
+    border: none;
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+  }
+}
+
 .teaser__button-mobile-title {
   display: none;
 }
@@ -55,20 +81,6 @@
   width: 54%;
   padding-left: 2.3%;
   padding-top: 143px;
-
-
-  &::before {
-    font-family: "ptmono", "Arial", sans-serif;
-    font-weight: normal;
-    text-transform: none;
-    position: absolute;
-    content: "Скролл вниз";
-    font-size: 14px;
-    line-height: 16px;
-    transform: rotate(-90deg);
-    left: 0;
-    top: 565px;
-  }
 }
 
 .teaser__image-wrapper {
@@ -101,11 +113,13 @@
     top: 16px;
     left: 0.4%;
   }
-
-
 }
 
 @media (max-width: $desktop-width) {
+  .teaser__scroll-button {
+    display: none;
+  }
+
   .teaser {
     min-height: 686px;
     background-image: url(../img/teaser-background-tablet.png);
@@ -118,10 +132,6 @@
     position: relative;
     padding-left: 11.5%;
     margin-top: 169px;
-
-    &::before {
-      display: none;
-    }
   }
 
   .teaser__text-wrapper {
@@ -220,6 +230,7 @@
     width: 297px;
     top: -78px;
     right: -2px;
+
     &:before {
       top: -138px;
       left: 126px;

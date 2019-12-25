@@ -52,10 +52,11 @@
       <div class="teaser__text-wrapper">
         <h1 class="teaser__title">Печатные платы</h1>
         <p class="teaser__title-description">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <button class="button teaser__button" type="button">
+        <button class="button teaser__button button--js-scroll" type="button">
           <span class="teaser__button-main-title">Получить бесплатную консультацию</span>
           <span class="teaser__button-mobile-title">Бесплатная консультация</span>
         </button>
+        <button class=" button teaser__scroll-button button--js-scroll">Скролл вниз</button>
       </div>
       <div class="teaser__image-wrapper">
         <picture>
@@ -191,7 +192,7 @@
     </div>
   </section>
 
-  <section class="form">
+  <section class="form" id="form--js">
 
     <div class="form__wrapper">
 
@@ -288,7 +289,7 @@
 
       <div class="accordion page-footer__middle-part">
 
-        <input id="accordion-1" type="checkbox">
+        <input class="accordion__checkbox" id="accordion-1" type="checkbox">
 
         <label for="accordion-1" class="page-footer__title">Разделы сайта</label>
         <article class="page-footer__navigation">
@@ -328,9 +329,9 @@
 
     <div class="page-footer__right-wrapper">
 
-      <div class="accordion page-footer__right-part">
+      <div class="accordion accordion__active page-footer__right-part">
 
-        <input id="accordion-2" type="checkbox" checked>
+        <input id="accordion-2" class="accordion__checkbox" type="checkbox" checked>
 
         <label for="accordion-2" class="page-footer__title">Наш офис</label>
         <article class="page-footer__contacts">
@@ -353,12 +354,17 @@
 
 <section class="modal">
   <form class="modal__form" action="https://echo.htmlacademy.ru">
+    <button class="modal__close-button">
+      <svg class="" width="16.56" height="16.56">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
 
     <p class="modal__title">Закажите звонок</p>
     <p class="modal__sub-title">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
 
     <!--    <fieldset class="modal__set modal__set&#45;&#45;contacts">-->
-    <input type="text" name="name" class="modal__input" placeholder="Имя">
+    <input type="text" name="name" class="modal__input modal__input--name" placeholder="Имя">
     <input type="tel" name="phone-number" class="modal__input modal__input--phone" placeholder="Телефон">
     <p class="modal__textarea-wrapper">
       <textarea name="question" class="modal__input modal__question-area" placeholder="Ваш вопрос"></textarea>
@@ -372,7 +378,8 @@
         <input class="visually-hidden agreement__input-checkbox" type="checkbox" id="agreement-modal" name="agree"
                value="agree"
                checked="true">
-        <label class="agreement__input-label" for="agreement-modal">Я согласен на обработку &nbsp;персональных данных</label>
+        <label class="agreement__input-label" for="agreement-modal">Я согласен на обработку &nbsp;персональных
+          данных</label>
       </div>
     </div>
   </form>
