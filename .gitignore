@@ -11,5 +11,5 @@ node_modules/
 npm-debug.*
 Thumbs.db
 /smart_device.iml
-build/
+
 

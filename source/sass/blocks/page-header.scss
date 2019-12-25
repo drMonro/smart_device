@@ -13,18 +13,30 @@
   margin: 0 auto;
   margin-top: 33px;
   padding: 0 20px;
+
+
 }
 
 .page-header__logo-wrapper {
   width: 202px;
+  //position: relative;
+  //&:before {
+  //  content: "";
+  //  right: -200px;
+  //  position: absolute;
+  //  width: 37px;
+  //  height: 1px;
+  //  background-color: #fff;
+  //  box-shadow: 0 8px 0 0 #fff;
+  //}
 }
 
 .page-header__elements-wrapper {
   display: flex;
-  //justify-content: space-between;
   align-items: center;
-  //width: 46.818%;
   width: 662px;
+  position: relative;
+
 }
 
 .page-header__link {
@@ -80,8 +92,10 @@
   }
 
   .page-header__elements-wrapper {
+    position: relative;
     width: 82.67px;
     justify-content: space-between;
+
   }
 
   .page-header__mail-link,
