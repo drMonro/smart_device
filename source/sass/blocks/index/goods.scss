@@ -28,14 +28,8 @@
 }
 
 .goods__item {
+  height: auto;
   width: 31.6%;
-  max-height: 620px;
-}
-
-.goods__item {
-  //position: relative;
-  //overflow: hidden;
-  //width: 370px;
 }
 
 .goods__item-link {
@@ -101,6 +95,8 @@
     max-height: 256px;
     display: flex;
     justify-content: center;
+    max-width: 100%;
+    //max-width: auto;
   }
 
   .goods__image {

@@ -42,6 +42,7 @@
 
   &:hover,
   &:focus {
+    color: darken(#ffffff, 15%);
     border: 1px solid $blue;
     background-color: lighten($blue, 10%);
   }
@@ -131,7 +132,7 @@
   .teaser__wrapper {
     position: relative;
     padding-left: 11.5%;
-    margin-top: 169px;
+    margin-top: 187px;
   }
 
   .teaser__text-wrapper {
@@ -168,7 +169,7 @@
   .teaser__image-wrapper {
     position: absolute;
     width: 260px;
-    left: unset;
+    left: auto;
     right: -2px;
     top: -74px;
 
@@ -190,18 +191,18 @@
 @media (max-width: $tablet-width) {
 
   .teaser {
-    min-height: 647px;
+    min-height: 649px;
     background-image: url(../img/teaser-background-mobile.png);
     //background-position-y: 30px;
   }
 
   .teaser__wrapper {
     padding-left: 4.7%;
-    //padding-top: 390px;
+    margin-top: 169px;
   }
 
   .teaser__text-wrapper {
-    padding-top: 116px;
+    padding-top: 118px;
     position: relative;
     z-index: 3;
   }
@@ -228,7 +229,7 @@
   .teaser__image-wrapper {
     //width: 301px;
     width: 297px;
-    top: -78px;
+    top: -76px;
     right: -2px;
 
     &:before {
@@ -242,7 +243,8 @@
   .teaser__button {
     margin-left: 3px;
     width: 94%;
-    padding: 5.5% 3%;
+    //padding: 5.5% 3%;
+    min-height: 55px;
   }
 
   .teaser__button-main-title {

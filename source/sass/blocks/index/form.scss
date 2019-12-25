@@ -1,5 +1,6 @@
 .form {
   background-color: $blue;
+  position: relative;
 
   & fieldset {
     margin: 0;
@@ -20,8 +21,8 @@
 .form__image-wrapper {
   width: 686px;
   position: relative;
-  top: -25.8%;
-  left: -8.2%;
+  top: -150px;
+  left: -110px;
 }
 
 .form__image {
@@ -34,11 +35,35 @@
   box-sizing: content-box;
   padding-right: 1%;
   width: 44.3%;
+  min-width: 598px;
   position: relative;
   z-index: 3;
 
   & > :not(:first-child) {
     padding-left: 5px;
+    padding-left: 0.8%;
+  }
+
+  &::before, &::after {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    width: 265px;
+    height: 255px;
+    background-image: url(../img/form-decoration.svg);
+    right: -324px;
+    top: -47px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  &::after {
+    right: -416px;
+    top: 197px;
+    width: 343px;
+    height: 405px;
+    transform: rotate(180deg);
   }
 }
 
@@ -64,7 +89,7 @@
   border: none;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 16px;
-  width: 40%;
+  width: 41.5%;
 
   &::-webkit-input-placeholder {
     color: #ffffff;
@@ -76,7 +101,13 @@
 }
 
 .form__set input:first-child {
-  margin-right: 3.5%;
+  //margin-right: 3.5%;
+  //margin-right: 22px;
+}
+
+.form__question-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
 .form__question-area {
@@ -101,14 +132,20 @@
   background-color: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
-  //margin-top: 19px;
-  //margin-bottom: 8px;
   padding: 14px 15px;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: #ffffff;
     color: $blue;
   }
+}
+
+.form__input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  margin: 0;
+  padding: 0;
 }
 
 .form__set.form__set--contacts {
@@ -116,7 +153,8 @@
 }
 
 .form__set.form__set--question {
-  width: 96%;
+  width: 100%;
+  max-width: 574px;
   box-sizing: border-box;
 }
 
@@ -127,14 +165,20 @@
 
 @media (max-width: $desktop-width) {
 
+
+  .form__content::before,
+  .form__content::after,
   .form__image-wrapper {
     display: none;
   }
 
+  .form__input-wrapper {
+    width: 100%;
+  }
+
   .form__wrapper {
     height: 586px;
-    padding-left: 11.4%;
-    padding-top: 78px;
+    padding: 78px 11.4% 0;
   }
 
   .form__title {
@@ -153,7 +197,7 @@
   }
 
   .form__set input {
-    width: 36.6%;
+    width: 41.6%;
   }
 
   .form__set.form__set--contacts {
@@ -161,7 +205,8 @@
   }
 
   .form__set.form__set--question {
-    width: 87.5%;
+    min-width: 595px;
+    max-width: auto;
   }
 
   .form__submit {
@@ -177,6 +222,14 @@
 
 
 @media (max-width: $tablet-width) {
+
+  .form__content {
+    max-width: auto;
+    min-width: auto;
+  }
+  .form__input-wrapper {
+    flex-wrap: wrap;
+  }
 
   .form__wrapper {
     padding-left: 3.3%;
@@ -212,6 +265,8 @@
 
   .form__set.form__set--question {
     width: 100%;
+    min-width: auto;
+
   }
 
   .form__question-area {

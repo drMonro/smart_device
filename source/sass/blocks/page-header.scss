@@ -15,13 +15,9 @@
   padding: 0 20px;
 }
 
-
-
 .page-header__logo-wrapper {
   width: 202px;
 }
-
-
 
 .page-header__elements-wrapper {
   display: flex;
@@ -38,7 +34,7 @@
 }
 
 .page-header__mail-link {
-  padding-right: 88px;
+  margin-right: 88px;
   width: 135px;
 }
 
@@ -49,7 +45,7 @@
 
 .page-header__phone-link {
   width: 206px;
-  padding-right: 50px;
+  margin-right: 50px;
 
 }
 
@@ -73,6 +69,8 @@
   .page-header__wrapper {
     padding: 0 25px;
     margin-top: 20px;
+    min-width: 768px;
+    box-sizing: border-box;
   }
 
 
@@ -90,6 +88,7 @@
   .page-header__phone-link {
     width: auto;
     padding-right: 0;
+    margin-right: 0;
   }
 
   .page-header__envelope-svg {
@@ -112,7 +111,7 @@
   }
 
   .page-header__wrapper {
-
+    min-width: 320px;
     padding: 0 17px;
     margin-top: 17px;
   }

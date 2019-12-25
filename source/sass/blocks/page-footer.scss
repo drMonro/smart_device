@@ -150,9 +150,11 @@
 }
 
 
-//.page-footer__navigation-item:nth-child(odd) {
-//  padding-right: 30px;
-//}
+.page-footer__link:hover,
+.page-footer__link:focus {
+  color: $blue;
+}
+
 
 @media (max-width: $desktop-width) {
   .page-footer__wrapper {
@@ -284,6 +286,7 @@
 
   .page-footer__wrapper {
     padding-top: 46px;
+    padding-bottom: 10px;
   }
 
   .page-footer__left-wrapper {
@@ -354,6 +357,10 @@
     min-height: auto;
     padding-left: 5%;
     padding-bottom: 9px;
+  }
+
+  .page-footer__middle-part {
+    padding-bottom: 28px
   }
 
 

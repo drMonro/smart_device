@@ -14,6 +14,13 @@
   border: 1px solid #ffffff;
 }
 
+.agreement__input-checkbox:focus + label::before,
+.agreement__input-checkbox:hover + label::before {
+  box-shadow: 0 0 5px 2px #ffffff;
+}
+
+
+
 .agreement__input-checkbox:checked + label::after {
   content: " ";
   position: absolute;
