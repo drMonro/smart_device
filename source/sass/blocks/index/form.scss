@@ -140,6 +140,7 @@
 }
 
 .form__input-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 96%;
@@ -233,8 +234,9 @@
   .form__wrapper {
     padding-left: 3.3%;
     padding-right: 4.6%;
-    padding-top: 29px;
-    height: 610px;
+    padding-top: 27px;
+    height: 613px;
+    min-height: 613px;
   }
 
   .form__title {
@@ -245,7 +247,7 @@
   }
 
   .form__sub-title {
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 
   .form__set input:first-child {
@@ -281,6 +283,10 @@
     width: 100%;
     margin-right: 0;
     margin-bottom: 24px
+  }
+
+  .form__input--phone {
+    margin-top: 33px;
   }
 
 }
