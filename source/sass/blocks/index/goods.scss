@@ -12,7 +12,6 @@
 }
 
 .goods__wrapper {
-  //max-width: 1170px;
   width: 60.9%;
   margin: 0 auto;
   padding-top: 87px;
@@ -37,6 +36,10 @@
   position: relative;
   height: 100%;
   display: block;
+
+  &:hover {
+    box-shadow: 0 0 5px 2px $blue;
+  }
 }
 
 .goods__image {

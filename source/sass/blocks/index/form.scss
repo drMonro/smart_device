@@ -99,11 +99,6 @@
   }
 }
 
-.form__set input:first-child {
-  //margin-right: 3.5%;
-  //margin-right: 22px;
-}
-
 .form__question-wrapper {
   margin: 0;
   padding: 0;
@@ -146,6 +141,17 @@
   width: 96%;
   margin: 0;
   padding: 0;
+}
+
+.form__input {
+  &::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+
+  &:-moz-placeholder {
+    color: #ffffff;
+  }
+
 }
 
 .form__set.form__set--contacts {
@@ -288,7 +294,6 @@
   .form__input--phone {
     margin-top: 33px;
   }
-
 }
 
 

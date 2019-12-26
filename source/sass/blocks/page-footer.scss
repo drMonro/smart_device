@@ -14,6 +14,7 @@
 .page-footer__left-wrapper {
   //width: 35.5%;
   width: 675px;
+
   & > * {
     padding-left: 37.3%;
     //width: 675px;
@@ -83,6 +84,7 @@
 
 .page-footer__right-wrapper {
   width: 587px;
+
   & > * {
     padding-right: 20%;
     //width: 675px;
@@ -94,8 +96,6 @@
 .page-footer__right-part {
   //width: 587px;
 }
-
-
 
 
 .page-footer__left-part,
@@ -181,9 +181,19 @@
   display: inline-block;
 }
 
-.page-footer__link:hover,
-.page-footer__link:focus {
-  color: $blue;
+.page-footer__link {
+
+  &:hover {
+    color: $blue;
+  }
+
+  & svg {
+    fill: #cdcdcd;
+  }
+
+  &:hover svg {
+    fill: $blue;
+  }
 }
 
 
@@ -323,10 +333,6 @@
     position: relative;
     padding-bottom: 0;
   }
-
-  //.page-footer__left-bottom-part {
-  //  display: inline-block;
-  //}
 
   .page-footer__wrapper {
     padding-top: 47px;

@@ -42,7 +42,6 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
-  //background-color: $accent-dark;
 
   &::-webkit-scrollbar { width: 0; }
 }
@@ -67,6 +66,16 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+
+.index-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
 .main {
   position: relative;
   overflow: hidden;
@@ -81,7 +90,6 @@ input[type="radio"].visually-hidden {
     background-image: url(../img/advantages-big-triangle.svg);
     right: 25.4%;
     top: 1026px;
-
   }
 
   &::after {
@@ -92,23 +100,11 @@ input[type="radio"].visually-hidden {
   }
 }
 
-.index-body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+
 
 @media (max-width: $desktop-width) {
   .main {
     margin-top: -72px;
-    //&::after {
-    //  display: none;
-    //}
-    //&::before {
-    //  right: -40.9%;
-    //  top: 778px;
-    //}
   }
 }
 

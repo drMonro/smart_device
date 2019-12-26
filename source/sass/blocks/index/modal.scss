@@ -30,8 +30,8 @@
 
   & .modal__close-button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 19px;
+    right: 14px;
     width: auto;
     background-color: transparent;
     border: none;
@@ -78,6 +78,10 @@
 
   &--phone {
     margin-bottom: 32px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 5px 2px #ffffff;
   }
 }
 
