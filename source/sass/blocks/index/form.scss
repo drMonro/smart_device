@@ -7,6 +7,16 @@
     padding: 0;
     border: none;
   }
+
+  & input {
+    &::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+
+    &:-moz-placeholder {
+      color: #ffffff;
+    }
+  }
 }
 
 .form__wrapper {
@@ -143,16 +153,7 @@
   padding: 0;
 }
 
-.form__input {
-  &::-webkit-input-placeholder {
-    color: #ffffff;
-  }
 
-  &:-moz-placeholder {
-    color: #ffffff;
-  }
-
-}
 
 .form__set.form__set--contacts {
   margin-bottom: 40px;

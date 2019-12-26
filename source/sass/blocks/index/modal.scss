@@ -11,6 +11,31 @@
   &--show {
     display: block;
   }
+
+  & input {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 16px 23px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+
+    &::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+
+    &:-moz-placeholder {
+      color: #ffffff;
+    }
+
+    &--phone {
+      margin-bottom: 32px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px 2px #ffffff;
+    }
+  }
 }
 
 .modal__form {
@@ -57,32 +82,6 @@
 
 .modal__textarea-wrapper {
   margin: 0;
-}
-
-
-.modal__input {
-  border: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  padding: 16px 23px;
-  box-sizing: border-box;
-  margin-bottom: 30px;
-
-  &::-webkit-input-placeholder {
-    color: #ffffff;
-  }
-
-  &:-moz-placeholder {
-    color: #ffffff;
-  }
-
-  &--phone {
-    margin-bottom: 32px;
-  }
-
-  &:hover {
-    box-shadow: 0 0 5px 2px #ffffff;
-  }
 }
 
 .modal__question-area {

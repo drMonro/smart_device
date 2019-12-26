@@ -46,12 +46,12 @@
   margin-right: 88px;
   width: 135px;
 
+  & span {
+    line-height: 17.92px;
+    color: #ffffff;
+  }
 }
 
-.page-header__link-data {
-  line-height: 17.92px;
-  color: #ffffff;
-}
 
 .page-header__phone-link {
   width: 206px;
