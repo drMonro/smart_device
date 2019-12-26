@@ -74,8 +74,6 @@ input[type="radio"].visually-hidden {
   min-height: 100vh;
 }
 
-
-
 .main {
   position: relative;
   overflow: hidden;
@@ -105,12 +103,25 @@ input[type="radio"].visually-hidden {
 @media (max-width: $desktop-width) {
   .main {
     margin-top: -72px;
+
+    &::after {
+      display: none;
+    }
+    &::before {
+      right: -40.9%;
+      top: 778px;
+    }
   }
 }
 
 @media (max-width: $tablet-width) {
   .main {
     margin-top: -55px;
+    &::before {
+      right: -135%;
+      top: 1299px;
+    }
+
   }
 }
 

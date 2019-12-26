@@ -7,77 +7,81 @@
   margin-bottom: 73px;
 }
 
-.advantages__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 0;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
-.advantages__list-svg {
-  fill: $blue;
-  margin-bottom: 13px;
-}
-
-.advantages__list-item {
-  min-height: 299px;
-  width: 48.8%;
-  box-sizing: border-box;
-  border: 1px solid #EBEBEB;
-  position: relative;
-  display: block;
-  padding: 25px;
-  padding-top: 39.3px;
-  padding-left: 41.5px;
-  height: 100%;
-  margin-bottom: 30px;
-  background-color: #ffffff;
-
-  &:hover {
-    cursor: pointer;
-    background-color: $blue;
+.advantages__list-wrapper {
+  & ul {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: 1170px;
+    margin: 0 auto;
   }
 
-  &:hover .advantages__title,
-  &:hover .advantages__list-svg,
-  &:hover .advantages__description {
-    color: #ffffff;
-    fill: white;
+  & svg {
+    fill: $blue;
+    margin-bottom: 13px;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 3px;
+  & li {
+    min-height: 300px;
+    width: 48.8%;
+    box-sizing: border-box;
+    border: 1px solid #EBEBEB;
+    position: relative;
+    display: block;
+    padding: 25px;
+    padding-top: 39.3px;
+    padding-left: 41.5px;
     height: 100%;
-    left: 0;
-    top: 0;
-    background-color: $blue;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $blue;
+    }
+
+    &:hover .advantages__title,
+    &:hover .advantages__list-svg,
+    &:hover .advantages__description {
+      color: #ffffff;
+      fill: white;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: $blue;
+    }
+  }
+
+  & span {
+    display: block;
+    font-family: "roboto-condensed", "Arial", sans-serif;
+    font-weight: normal;
+    color: $blue;
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 17px
+  }
+
+  & p {
+    width: 96%;
+    color: #666666;
+    margin: 0;
   }
 }
 
-.advantages__title {
-  display: block;
-  font-family: "roboto-condensed", "Arial", sans-serif;
-  font-weight: normal;
-  color: $blue;
-  font-size: 24px;
-  line-height: 34px;
-  margin-bottom: 17px
-}
-
-.advantages__description {
-  width: 96%;
-  color: #666666;
-  margin: 0;
-}
-
-.advantages__list--top {
+.advantages__list-wrapper--top {
   position: relative;
   z-index: 1;
-  &::before {
+
+  & ul::before {
     position: absolute;
     z-index: -1;
     content: "";
@@ -90,8 +94,8 @@
   }
 }
 
-.advantages__list--bottom {
-  &::before {
+.advantages__list-wrapper--bottom {
+  & ul::before {
     position: absolute;
     z-index: -1;
     content: "";
@@ -113,44 +117,42 @@
     margin-bottom: 23px;
   }
 
-  .advantages__list--bottom .advantages__list-item {
-    min-height: 232px;
-  }
-
-  .advantages__list-item {
-    width: 47.8%;
-    padding-top: 23px;
-    padding-left: 25px;
-    padding-right: 15px;
-    padding-bottom: 20px;
-
-    &::before {
-      width: 2px;
+  .advantages__list-wrapper--bottom {
+    & li {
+      min-height: 232px;
     }
   }
 
-  .advantages__list-svg {
-    margin: 0;
+  .advantages__list-wrapper {
+    & li {
+
+      width: 47.8%;
+      padding-top: 23px;
+      padding-left: 25px;
+      padding-right: 15px;
+      padding-bottom: 20px;
+    }
+
+    & li::before {
+      width: 2px;
+    }
+
+    & svg {
+      margin: 0;
+    }
+
+    & span {
+      margin-bottom: 9px;
+    }
   }
 
-  .advantages__title {
-    margin-bottom: 9px;
+  .advantages__list-wrapper--top li {
+    min-height: 305px;
   }
 
-  .advantages__list--bottom::before,
-  .advantages__list--top::before {
+  .advantages__list-wrapper--bottom ul::before,
+  .advantages__list-wrapper--top ul::before {
     display: none;
-  }
-  .advantages::before {
-    width: 559px;
-    height: 873px;
-    right: 0;
-    top: 91px;
-  }
-
-  .advantages__list-item--private .advantages__title {
-    margin-bottom: 15px;
-
   }
 
 }
@@ -161,47 +163,52 @@
     padding-right: 16px;
     padding-top: 37px;
     margin-bottom: 38px;
-
   }
 
-  .advantages__list-item {
+  .advantages__list-wrapper {
     width: 100%;
-    margin-bottom: 19px;
-    padding-bottom: 25px;
+
   }
 
-  .advantages__description {
-    width: 100%;
-  }
+  .advantages__list-wrapper {
+    & li {
+      width: 100%;
+    }
 
-  .advantages__title {
-    font-size: 20px;
-    line-height: 140.62%;
-  }
+    & span {
+      font-size: 20px;
+      line-height: 140.62%;
+    }
 
-  .advantages__list-svg {
-    margin-bottom: 6px;
-  }
-
-  .advantages__list-item--suppliers.advantages__list-item {
-    padding-right: 0;
-  }
-
-  .advantages__list-item--private {
-
-    &.advantages__list-item {
-      //padding-right: 23px;
+    & svg {
+      margin-bottom: 6px;
     }
   }
 
-  .advantages__list--bottom .advantages__list-item {
-    margin-bottom: 20px;
+  .advantages__list-wrapper--top {
+    margin-bottom: 0;
+    padding-bottom: 0;
 
+    & li {
+      min-height: 310px;
+      margin-bottom: 20px;
+    }
   }
 
-  .advantages::before {
-    right: -118px;
-    top: 651px;
+  .advantages__list-wrapper--bottom li {
+    margin-bottom: 19px;
+    padding-right: 17px;
   }
+
+
+  //Ошибки в макете. Классы для PP
+  .advantages__list-item--suppliers {
+    height: 310px !important;
+  }
+  .advantages__list-item--private {
+    height: 244px !important;
+  }
+
+
 
 }
