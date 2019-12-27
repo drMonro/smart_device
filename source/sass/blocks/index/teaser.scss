@@ -33,6 +33,10 @@
     border: 1px solid $blue;
     background-color: lighten($blue, 10%);
   }
+
+  & span:last-child {
+    display: none;
+  }
 }
 
 .teaser__scroll-button {
@@ -61,9 +65,7 @@
   }
 }
 
-.teaser__button-mobile-title {
-  display: none;
-}
+
 
 .teaser__text-wrapper {
   width: 54%;
@@ -239,14 +241,15 @@
     margin-left: 3px;
     width: 94%;
     min-height: 55px;
+
+    & span:first-child {
+      display: none;
+    }
+
+    & span:last-child {
+      display: inline;
+    }
   }
 
-  .teaser__button-main-title {
-    display: none;
-  }
-
-  .teaser__button-mobile-title {
-    display: inline;
-  }
 
 }

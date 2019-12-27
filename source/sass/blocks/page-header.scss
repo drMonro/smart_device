@@ -14,16 +14,12 @@
   padding: 0 20px;
 }
 
-.page-header__logo-wrapper {
-  width: 202px;
-}
-
 .page-header__elements-wrapper {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 662px;
   position: relative;
-
 }
 
 .page-header__link {
@@ -33,18 +29,16 @@
 
   & svg {
     fill: $blue;
+    padding-right: 20px;
   }
+
   &:hover svg {
     fill: #ffffff;
   }
+
   &:hover span {
     color: $blue;
   }
-}
-
-.page-header__mail-link {
-  margin-right: 88px;
-  width: 135px;
 
   & span {
     line-height: 17.92px;
@@ -52,19 +46,18 @@
   }
 }
 
+.page-header__mail-link {
+  margin-right: 36px;
 
-.page-header__phone-link {
-  width: 206px;
-  margin-right: 50px;
-
+  & svg {
+    width: 19px;
+    height: 14px;
+  }
 }
 
-.page-header__envelope-svg {
-  padding-right: 8px;
-}
-
-.page-header__phone-svg {
-  padding-right: 6px;
+.page-header__phone-link svg {
+  width: 18px;
+  height: 18px;
 }
 
 .page-header__button {
@@ -76,6 +69,11 @@
 }
 
 @media (max-width: $desktop-width) {
+
+  .page-header__button {
+    display: none;
+  }
+
   .page-header__wrapper {
     padding: 0 25px;
     margin-top: 20px;
@@ -83,37 +81,36 @@
     box-sizing: border-box;
   }
 
-
-  .page-header__link-data,
-  .page-header__button {
-    display: none;
-  }
-
   .page-header__elements-wrapper {
     position: relative;
     width: 82.67px;
     justify-content: space-between;
-
   }
 
-  .page-header__mail-link,
-  .page-header__phone-link {
-    width: auto;
-    padding-right: 0;
+  .page-header__link {
+    & span {
+      display: none;
+    }
+
+    & svg {
+      padding: 0;
+    }
+  }
+
+  .page-header__mail-link {
     margin-right: 0;
+
+    & svg {
+      width: 25.33px;
+      height: 18.67px;
+    }
   }
 
-  .page-header__envelope-svg {
-    width: 25.33px;
-    height: 18.67px;
-    padding-right: 0;
-  }
-
-  .page-header__phone-svg {
+  .page-header__phone-link svg {
     width: 24px;
     height: 24px;
-    padding-right: 0;
   }
+
 }
 
 @media (max-width: $tablet-width) {
@@ -126,19 +123,6 @@
     min-width: 320px;
     padding: 0 17px;
     margin-top: 17px;
-  }
-
-  .page-header__logo-wrapper {
-    width: auto;
-  }
-
-  .page-header__logo-text-wrapper {
-    display: none;
-  }
-
-  .page-header__logo-svg {
-    width: 38px;
-    height: 38px;
   }
 
   .page-header__elements-wrapper {
