@@ -10,16 +10,15 @@ var accordionSetup = function() {
   AccordionCheckBoxes.forEach(function (checkbox) {
     checkbox.addEventListener('change', function (evt) {
       evt.preventDefault();
-      if (checkbox.closest('.accordion__checkbox').checked === true) {
-
+      if (checkbox.closest('.accordion__checkbox').classList.contains("accordion__checkbox-active")) {
         AccordionCheckBoxes.forEach(function (accordion) {
-          accordion.checked = false;
+          accordion.classList.remove("accordion__checkbox-active");
         });
-
-        checkbox.checked = true;
       } else {
-        checkbox.closest('.accordion__checkbox').checked = true;
-        checkbox.checked = false;
+        AccordionCheckBoxes.forEach(function (accordion) {
+          accordion.classList.remove("accordion__checkbox-active");
+        });
+        checkbox.classList.add("accordion__checkbox-active");
       }
     });
   });

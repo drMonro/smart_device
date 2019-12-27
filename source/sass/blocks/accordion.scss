@@ -140,7 +140,7 @@
       background-repeat: no-repeat;
     }
 
-    & input:checked + label:after {
+    & input.accordion__checkbox-active + label:after {
       content: '';
       position: absolute;
       width: 16px;
@@ -151,7 +151,7 @@
       background-repeat: no-repeat;
     }
 
-    & input:checked ~ div {
+    & input.accordion__checkbox-active ~ div {
       display: block;
       min-height: 156px;
     }
