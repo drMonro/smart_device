@@ -2,40 +2,38 @@
   position: relative;
   padding-left: 32px;
   width: 225px;
-}
 
-.agreement__input-checkbox + label::before {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  left: 0;
-  top: 8px;
-  border: 1px solid #ffffff;
-}
+  & label {
+    font-size: 14px;
+    line-height: 16px;
+  }
 
-.agreement__input-checkbox:focus + label::before,
-.agreement__input-checkbox:hover + label::before {
-  box-shadow: 0 0 5px 2px #ffffff;
-}
+  & input + label::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0;
+    top: 8px;
+    border: 1px solid #ffffff;
+  }
 
+  & input:focus + label::before,
+  & input:hover + label::before {
+    box-shadow: 0 0 5px 2px #ffffff;
+  }
 
-
-.agreement__input-checkbox:checked + label::after {
-  content: " ";
-  position: absolute;
-  width: 7.5px;
-  height: 4.5px;
-  background-image: url("../img/chekbox-ok.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  left: 4px;
-  top: 13px;
-}
-
-.agreement__input-label {
-  font-size: 14px;
-  line-height: 16px;
+  & input:checked + label::after {
+    content: " ";
+    position: absolute;
+    width: 7.5px;
+    height: 4.5px;
+    background-image: url("../img/chekbox-ok.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    left: 4px;
+    top: 13px;
+  }
 }
 
 .agreement--modal {
@@ -45,13 +43,11 @@
   line-height: 16px;
   opacity: 0.8;
 
-  & .agreement__input-checkbox + label::before {
+  & input + label::before {
     top: 2px;
   }
 
-  & .agreement__input-checkbox:checked + label::after {
+  & input:checked + label::after {
     top: 7px;
   }
-
-
 }

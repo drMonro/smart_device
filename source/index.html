@@ -258,7 +258,7 @@
         <span class="form__sub-title">Мы проконсультируем Вас бесплатно</span>
 
         <fieldset class="form__set form__set--contacts">
-          <p class="form__input-wrapper">
+          <p class="form__inputs-wrapper">
             <label class="visually-hidden" for="section-name">Поле ввода имени</label>
             <input type="text" name="name" id="section-name" class="form__input" placeholder="Имя">
             <label class="visually-hidden" for="section-phone">Поле ввода телефона</label>
@@ -276,11 +276,11 @@
         </fieldset>
 
         <div class="form__submit-wrapper">
-          <button class="button form__submit" type="submit">Задать вопрос</button>
+          <button class="button form__submit-button" type="submit">Задать вопрос</button>
 
           <div class="agreement">
-            <input class="visually-hidden agreement__input-checkbox" type="checkbox" id="agreement" checked="checked">
-            <label class="agreement__input-label" for="agreement">Я согласен на обработку персональных данных</label>
+            <input class="visually-hidden" type="checkbox" id="agreement" checked="checked">
+            <label for="agreement">Я согласен на обработку персональных данных</label>
           </div>
         </div>
       </form>
@@ -309,32 +309,33 @@
         </a>
 
         <ul class="page-footer__social-links">
-          <li class="page-footer__social-link">
+          <li>
             <a href="#" class="page-footer__link" aria-label="Ссылка на Facebook">
-              <svg class="page-footer__logo-svg" width="27" height="27">
+              <svg width="27" height="27">
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
-          <li class="page-footer__social-link">
+          <li>
             <a href="#" class="page-footer__link" aria-label="Ссылка на Одноклассники">
-              <svg class="page-footer__logo-svg" width="27" height="27">
+              <svg width="27" height="27">
                 <use xlink:href="#icon-ok"></use>
               </svg>
             </a>
           </li>
-          <li class="page-footer__social-link">
+          <li>
             <a href="#" class="page-footer__link" aria-label="Ссылка на ВКонтакте">
-              <svg class="page-footer__logo-svg" width="27" height="27">
+              <svg width="27" height="27">
                 <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
         </ul>
+
       </div>
 
       <div class="page-footer__left-bottom-part">
-        <span class="page-footer__text">Все права защищены</span>
+        <p class="page-footer__text">Все права защищены</p>
         <span class="page-footer__text page-footer__text--established">1999-2018 SD Service Devices</span>
       </div>
 
@@ -448,9 +449,9 @@
     <div class="modal__submit-wrapper">
       <button class="button modal__submit" type="submit">Отправить</button>
       <div class="agreement agreement--modal">
-        <input class="visually-hidden agreement__input-checkbox" id="modal-agreement" type="checkbox"
+        <input class="visually-hidden" id="modal-agreement" type="checkbox"
                checked="checked">
-        <label class="agreement__input-label" for="modal-agreement">Я согласен на обработку &nbsp;персональных
+        <label for="modal-agreement">Я согласен на обработку &nbsp;персональных
           данных</label>
       </div>
     </div>

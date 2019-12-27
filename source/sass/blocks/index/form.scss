@@ -2,36 +2,13 @@
   background-color: $blue;
   position: relative;
 
-  .img {
-    width: 686px;
-    position: relative;
-    z-index: 1;
+  & .form__wrapper {
+    height: 580px;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding-top: 89px;
+    display: flex;
   }
-
-  & fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-
-
-  & input {
-    &::-webkit-input-placeholder {
-      color: #ffffff;
-    }
-
-    &:-moz-placeholder {
-      color: #ffffff;
-    }
-  }
-}
-
-.form__wrapper {
-  height: 580px;
-  max-width: 1350px;
-  margin: 0 auto;
-  padding-top: 89px;
-  display: flex;
 }
 
 .form__image-wrapper {
@@ -39,6 +16,12 @@
   position: relative;
   top: -150px;
   left: -110px;
+
+  & img {
+    width: 686px;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .form__content {
@@ -88,11 +71,26 @@
     margin-bottom: 50px;
   }
 
+  & fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
   & input {
+    color: #ffffff;
     border: none;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 16px;
     width: 41.5%;
+
+    &::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+
+    &:-moz-placeholder {
+      color: #ffffff;
+    }
   }
 
   & textarea {
@@ -117,20 +115,36 @@
   }
 }
 
+.form__set.form__set--contacts {
+  margin-bottom: 40px;
+}
+
+.form__inputs-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  margin: 0;
+  padding: 0;
+}
+
+.form__set.form__set--question {
+  width: 100%;
+  max-width: 574px;
+  box-sizing: border-box;
+}
 
 .form__question-wrapper {
   margin: 0;
   padding: 0;
 }
 
-
 .form__submit-wrapper {
   display: flex;
   align-items: center;
 }
 
-
-.form__submit {
+.form__submit-button {
   width: 270px;
   margin-right: 37px;
   background-color: transparent;
@@ -144,37 +158,12 @@
   }
 }
 
-.form__input-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 96%;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-.form__set.form__set--contacts {
-  margin-bottom: 40px;
-}
-
-.form__set.form__set--question {
-  width: 100%;
-  max-width: 574px;
-  box-sizing: border-box;
-}
-
 @media (max-width: $desktop-width) {
 
   .form__content::before,
   .form__content::after,
   .form__image-wrapper {
     display: none;
-  }
-
-  .form__input-wrapper {
-    width: 100%;
   }
 
   .form__wrapper {
@@ -199,6 +188,14 @@
     & input {
       width: 41.6%;
     }
+
+    & textarea {
+      min-height: 161px;
+    }
+  }
+
+  .form__inputs-wrapper {
+    width: 100%;
   }
 
   .form__set.form__set--contacts {
@@ -210,21 +207,14 @@
     max-width: 100%;
   }
 
-  .form__submit {
+  .form__submit-button {
     width: 279px;
     margin-right: 40px;
   }
 
-  .form__question-area {
-    min-height: 161px;
-  }
 }
 
 @media (max-width: $tablet-width) {
-
-  .form__input-wrapper {
-    flex-wrap: wrap;
-  }
 
   .form__wrapper {
     padding-left: 3.3%;
@@ -236,6 +226,7 @@
 
   .form__content {
     min-width: 0;
+
     & > p {
       font-size: 28px;
       line-height: 140.62%;
@@ -259,6 +250,10 @@
     }
   }
 
+  .form__inputs-wrapper {
+    flex-wrap: wrap;
+  }
+
   .form__set.form__set--contacts {
     margin-bottom: 31px;
   }
@@ -268,12 +263,11 @@
     min-width: auto;
   }
 
-
   .form__submit-wrapper {
     flex-wrap: wrap;
   }
 
-  .form__submit {
+  .form__submit-button {
     width: 100%;
     margin-right: 0;
     margin-bottom: 24px
