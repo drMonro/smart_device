@@ -1,58 +1,178 @@
-.accordion input {
-   display: none;
- }
+.accordion {
+
+  & label {
+    font-family: "roboto-condensed", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 16px;
+    color: #1B2D37;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 26px;
+  }
+
+  & input {
+    display: none;
+  }
+
+  & .accordion__list-wrapper {
+    width: 545px;
+  }
+
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  & li, & a {
+    font-size: 15px;
+    line-height: 25px;
+    color: #1B2D37;
+    display: inline-block;
+  }
+
+  & li {
+    opacity: 0.5;
+    width: 236px;
+    box-sizing: border-box;
+  }
+}
+
+.accordion--second {
+  width: 100%;
+  display: block;
+
+  & ul {
+    height: auto;
+  }
+
+  & li {
+    width: 100%;
+    margin: 0;
+  }
+
+  & .accordion__list-wrapper {
+    width: auto;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .accordion {
+    & li {
+      width: 100%;
+    }
+
+    & .accordion__list-wrapper {
+      width: auto;
+    }
+  }
+
+  .accordion--flex-order {
+    & ul {
+      & li:first-child {
+        order: 0;
+      }
+
+      & li:nth-child(2) {
+        order: 4;
+      }
+
+      & li:nth-child(3) {
+        order: 1;
+      }
+
+      & li:nth-child(4) {
+        order: 5;
+      }
+
+      & li:nth-child(5) {
+        order: 2;
+      }
+
+      & li:nth-child(6) {
+        order: 6;
+      }
+
+      & li:nth-child(7) {
+        order: 3;
+      }
+    }
+  }
+
+}
 
 @media (max-width: $tablet-width) {
-  .accordion input {
-    display: block;
+
+  .accordion {
+
+    .accordion__list-wrapper {
+      width: 250px;
+    }
+
+    & input {
+      display: block;
+    }
+
+    & input:focus + label:after {
+      box-shadow: 0 0 5px 2px $blue;
+    }
+
+    & input + label:after,
+    & input + label:hover:after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: 5.5%;
+      transform: translateY(-50%);
+      top: 50%;
+      background-image: url("../img/plus.svg");
+      background-repeat: no-repeat;
+    }
+
+    & input:checked + label:after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: 5.5%;
+      top: 100%;
+      background-image: url("../img/minus.svg");
+      background-repeat: no-repeat;
+    }
+
+    & input:checked ~ div {
+      display: block;
+      min-height: 156px;
+    }
+
+    & div {
+      margin-top: -1px;
+      overflow: hidden;
+      position: relative;
+      z-index: 10;
+      padding-top: 20px;
+    }
+
+    & input ~ div {
+      display: none;
+    }
+
   }
 
-  .accordion input:focus + label:after {
-    box-shadow: 0 0 5px 2px $blue;
-  }
+  .accordion--second {
+    & ul {
+      margin-top: 15px;
+    }
 
-
-  .accordion input + label:after,
-  .accordion input + label:hover:after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    right: 5.5%;
-    transform: translateY(-50%);
-    top: 50%;
-    background-image: url("../img/plus.svg");
-    background-repeat: no-repeat;
-    //background-color: green;
-  }
-
-  .accordion input:checked + label:after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    right: 5.5%;
-    //transform: translateY(-50%);
-    top: 100%;
-    background-image: url("../img/minus.svg");
-    background-repeat: no-repeat;
-  }
-
-  .accordion div {
-    margin-top: -1px;
-    overflow: hidden;
-    //height: 0;
-    position: relative;
-    z-index: 10;
-    padding-top: 20px;
-  }
-  .accordion input:checked ~ div {
-    display: block;
-    min-height: 156px;
-  }
-
-  .accordion input ~ div {
-    display: none;
+    & li {
+      //width: 80%;
+    }
   }
 
 
