@@ -11,6 +11,11 @@ var accordionSetup = function() {
     checkbox.addEventListener('change', function (evt) {
       evt.preventDefault();
       if (checkbox.closest('.accordion__checkbox').checked === true) {
+
+        AccordionCheckBoxes.forEach(function (accordion) {
+          accordion.checked = false;
+        });
+
         checkbox.checked = true;
       } else {
         checkbox.closest('.accordion__checkbox').checked = true;

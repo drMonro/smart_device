@@ -110,6 +110,11 @@
 
   .accordion {
 
+    & label {
+      display: block;
+      position: relative;
+    }
+
     .accordion__list-wrapper {
       width: 250px;
     }
