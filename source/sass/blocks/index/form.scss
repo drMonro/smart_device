@@ -2,11 +2,18 @@
   background-color: $blue;
   position: relative;
 
+  .img {
+    width: 686px;
+    position: relative;
+    z-index: 1;
+  }
+
   & fieldset {
     margin: 0;
     padding: 0;
     border: none;
   }
+
 
   & input {
     &::-webkit-input-placeholder {
@@ -23,9 +30,8 @@
   height: 580px;
   max-width: 1350px;
   margin: 0 auto;
-  padding-top: 91px;
+  padding-top: 89px;
   display: flex;
-
 }
 
 .form__image-wrapper {
@@ -35,14 +41,7 @@
   left: -110px;
 }
 
-.form__image {
-  width: 686px;
-  position: relative;
-  z-index: 1;
-}
-
 .form__content {
-  box-sizing: content-box;
   padding-right: 1%;
   width: 44.3%;
   min-width: 598px;
@@ -64,7 +63,6 @@
     top: -47px;
     background-repeat: no-repeat;
     background-size: cover;
-
   }
 
   &::after {
@@ -74,55 +72,57 @@
     height: 405px;
     transform: rotate(180deg);
   }
-}
 
-.form__title {
-  margin: 0;
-  padding: 0;
-  font-family: "roboto-condensed", "Arial", sans-serif;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 51px;
-  margin-bottom: 11px;
-}
-
-.form__sub-title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 50px;
-
-}
-
-.form__set input,
-.form__question-area {
-  border: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 16px;
-  width: 41.5%;
-
-  &::-webkit-input-placeholder {
-    color: #ffffff;
+  & > p {
+    margin: 0;
+    padding: 0;
+    font-family: "roboto-condensed", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+    margin-bottom: 11px;
   }
 
-  &:-moz-placeholder {
-    color: #ffffff;
+  & > span {
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  & input {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    width: 41.5%;
+  }
+
+  & textarea {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    min-height: 154px;
+    margin-bottom: 44px;
+    resize: none;
+    box-sizing: border-box;
+
+    &::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+
+    &:-moz-placeholder {
+      color: #ffffff;
+    }
   }
 }
+
 
 .form__question-wrapper {
   margin: 0;
   padding: 0;
 }
 
-.form__question-area {
-  overflow: auto;
-  display: block;
-  width: 100%;
-  min-height: 154px;
-  margin-bottom: 44px;
-  resize: none;
-  box-sizing: border-box;
-}
 
 .form__submit-wrapper {
   display: flex;
@@ -165,13 +165,7 @@
   box-sizing: border-box;
 }
 
-.page-footer__contacts {
-  margin-top: 22px;
-}
-
-
 @media (max-width: $desktop-width) {
-
 
   .form__content::before,
   .form__content::after,
@@ -188,23 +182,23 @@
     padding: 78px 11.4% 0;
   }
 
-  .form__title {
-    font-size: 32px;
-    line-height: 140.62%;
-    margin-bottom: 19px;
-  }
-
-  .form__sub-title {
-    margin-bottom: 54px;
-  }
-
   .form__content {
     padding: 0;
     width: 100%;
-  }
 
-  .form__set input {
-    width: 41.6%;
+    & > p {
+      font-size: 32px;
+      line-height: 140.62%;
+      margin-bottom: 19px;
+    }
+
+    & span {
+      margin-bottom: 54px;
+    }
+
+    & input {
+      width: 41.6%;
+    }
   }
 
   .form__set.form__set--contacts {
@@ -224,16 +218,10 @@
   .form__question-area {
     min-height: 161px;
   }
-
 }
-
 
 @media (max-width: $tablet-width) {
 
-  .form__content {
-
-    min-width: auto;
-  }
   .form__input-wrapper {
     flex-wrap: wrap;
   }
@@ -246,25 +234,29 @@
     min-height: 613px;
   }
 
-  .form__title {
-    font-size: 28px;
-    line-height: 140.62%;
-    margin-bottom: 14px;
-    padding-left: 4px;
-  }
+  .form__content {
+    min-width: 0;
+    & > p {
+      font-size: 28px;
+      line-height: 140.62%;
+      margin-bottom: 14px;
+      padding-left: 4px;
+    }
 
-  .form__sub-title {
-    margin-bottom: 26px;
-  }
+    & span {
+      margin-bottom: 26px;
+    }
 
-  .form__set input:first-child {
-    margin-right: 0;
-    margin-bottom: 33px;
-  }
+    & input {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
 
-  .form__set input {
-    width: 100%;
-    box-sizing: border-box;
+    & textarea {
+      min-height: 105px;
+      margin-bottom: 30px;
+    }
   }
 
   .form__set.form__set--contacts {
@@ -274,13 +266,8 @@
   .form__set.form__set--question {
     width: 100%;
     min-width: auto;
-
   }
 
-  .form__question-area {
-    min-height: 105px;
-    margin-bottom: 30px;
-  }
 
   .form__submit-wrapper {
     flex-wrap: wrap;
@@ -292,9 +279,6 @@
     margin-bottom: 24px
   }
 
-  .form__input--phone {
-    margin-top: 33px;
-  }
 }
 
 

@@ -9,7 +9,7 @@ var AccordionCheckBoxes = document.querySelectorAll(".accordion__checkbox");
 var accordionSetup = function() {
   AccordionCheckBoxes.forEach(function (checkbox) {
     checkbox.addEventListener('change', function (evt) {
-      // evt.preventDefault();
+      evt.preventDefault();
       if (checkbox.closest('.accordion__checkbox').checked === true) {
         checkbox.checked = true;
       } else {
@@ -156,6 +156,8 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
     });
   });
 };
+
+
 
 // Исполнение
 
