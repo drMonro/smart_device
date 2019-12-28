@@ -83,8 +83,7 @@ var currentYPosition = function () {
   // Internet Explorer 6, 7 and 8
   if (document.body.scrollTop) return document.body.scrollTop;
   return 0;
-}
-
+};
 
 var elmYPosition = function (eID) {
   var elm = document.getElementById(eID);
@@ -94,8 +93,7 @@ var elmYPosition = function (eID) {
     node = node.offsetParent;
     y += node.offsetTop;
   } return y;
-}
-
+};
 
 var smoothScroll = function (eID) {
   var startY = currentYPosition();
@@ -119,11 +117,11 @@ var smoothScroll = function (eID) {
     setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
     leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
   }
-}
+};
 
 var scrollSetup = function(scrollInputs, scrollDestination) {
   scrollInputs.forEach(function (scrollButton) {
-    scrollButton.addEventListener('click', function (evt) {
+    scrollButton.addEventListener('click', function () {
       smoothScroll(scrollDestination);
     });
   });
@@ -141,7 +139,7 @@ var phoneMask = {
       mask: '000'
     },
     NNNNNNN: {
-      mask: '0000000',
+      mask: '0000000'
     }
   }
 };
@@ -150,9 +148,9 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
 
   phoneInputs.forEach(function (phoneInput) {
     var cellularPhone = new IMask(phoneInput, inputMask);
-    phoneInput.addEventListener('focus', function (evt) {
-      if(evt.target.value === '') {
-        evt.target.value = phoneBeginning;
+    phoneInput.addEventListener('focus', function () {
+      if(cellularPhone.value === '') {
+        cellularPhone.value = phoneBeginning;
       }
     });
   });
