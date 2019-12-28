@@ -28,8 +28,30 @@
       color: #ffffff;
     }
 
-    &--phone {
-      margin-bottom: 32px;
+    &:hover {
+      box-shadow: 0 0 5px 2px #ffffff;
+    }
+  }
+
+  & textarea {
+    color: #ffffff;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 16px;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    min-height: 154px;
+    margin-bottom: 44px;
+    resize: none;
+    box-sizing: border-box;
+
+    &::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+
+    &:-moz-placeholder {
+      color: #ffffff;
     }
 
     &:hover {

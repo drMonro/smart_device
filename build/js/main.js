@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // Аккордеон
 
 var AccordionCheckBoxes = document.querySelectorAll(".accordion__checkbox");
@@ -23,7 +21,6 @@ var accordionSetup = function() {
     });
   });
 };
-
 
 // Форма
 var isStorageSupport = true;
@@ -154,14 +151,12 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
   phoneInputs.forEach(function (phoneInput) {
     var cellularPhone = new IMask(phoneInput, inputMask);
     phoneInput.addEventListener('focus', function (evt) {
-      if(evt.currentTarget.value === '') {
-        evt.currentTarget.value = phoneBeginning;
+      if(evt.target.value === '') {
+        evt.target.value = phoneBeginning;
       }
     });
   });
 };
-
-
 
 // Исполнение
 

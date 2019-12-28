@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // Аккордеон
 
 var AccordionCheckBoxes = document.querySelectorAll(".accordion__checkbox");
@@ -23,7 +21,6 @@ var accordionSetup = function() {
     });
   });
 };
-
 
 // Форма
 var isStorageSupport = true;
@@ -160,8 +157,6 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
     });
   });
 };
-
-
 
 // Исполнение
 

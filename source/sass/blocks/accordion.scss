@@ -113,6 +113,7 @@
     & label {
       display: block;
       position: relative;
+      margin-bottom: 23px;
     }
 
     .accordion__list-wrapper {
@@ -161,7 +162,7 @@
       overflow: hidden;
       position: relative;
       z-index: 10;
-      padding-top: 20px;
+      //padding-top: 20px;
     }
 
     & input ~ div {
