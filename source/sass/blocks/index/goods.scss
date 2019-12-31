@@ -1,14 +1,8 @@
 .goods {
   background-color: $accent-dark;
-  padding: 0 10px;
-}
-
-.goods__wrapper {
-  max-width: 1170px;
-  margin: 0 auto;
+  padding: 0;
+  //text-align: center;
   padding-top: 87px;
-  padding-bottom: 127px;
-  box-sizing: border-box;
 
   & p {
     font-family: "roboto-condensed", "Arial", sans-serif;
@@ -16,25 +10,61 @@
     font-size: 36px;
     line-height: 51px;
     margin: 0;
+    display: block;
+    padding-left: 1.6%;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 53px;
+
   }
+}
+
+.goods__wrapper {
+
+  max-width: 1200px;
+  //max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  //padding: 0 15px;
+
+  padding-bottom: 127px;
+  box-sizing: border-box;
+
 
   & ul {
-    //flex-wrap: wrap;
+    //width: 100%;
+    flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
+    //max-width: 1200px;
+    max-width: 1200px;
+
+    //justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    //margin-left: -15px;
+
+
   }
 
   & li {
     height: auto;
     width: 31.5%;
+    width: 370px;
+    height: 620px;
+
     max-height: 620px;
+    margin-right: 2.8%;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 20px;
   }
 
   & a {
+    background-color: #1B2D37;
+    background-size: cover;
     position: relative;
     height: 100%;
     //width: 370px;
@@ -62,6 +92,18 @@
   }
 }
 
+.goods__item-link--development {
+  background-image: url(../img/development-background-desktop@1x.png);
+}
+
+.goods__item-link--deploy {
+  background-image: url(../img/deploy-background-desktop@1x.png);
+}
+
+.goods__item-link--parts {
+  background-image: url(../img/parts-background-desktop@1x.png);
+}
+
 .goods__item-decoration {
   position: absolute;
   z-index: 3;
@@ -74,6 +116,26 @@
   background-position: center center;
   bottom: 0;
   right: 0;
+}
+
+@media (min-resolution: 144dpi), (max-resolution: 1.5dppx) {
+  .goods__item-link--development {
+    background-image: url(../img/development-background-desktop@2x.png);
+
+    background-image: url(../img/development-background-desktop@2x.webp);
+  }
+
+  .goods__item-link--deploy {
+    background-image: url(../img/deploy-background-desktop@2x.png);
+
+    background-image: url(../img/deploy-background-desktop@2x.webp);
+  }
+
+  .goods__item-link--parts {
+    background-image: url(../img/parts-background-desktop@2x.png);
+
+    background-image: url(../img/parts-background-desktop@2x.webp);
+  }
 }
 
 @media (max-width: $desktop-width) {
@@ -97,8 +159,8 @@
       width: 100%;
       margin-bottom: 46px;
       max-height: 256px;
-      display: flex;
-      justify-content: center;
+      //display: flex;
+      //justify-content: center;
       max-width: 100%;
     }
 
@@ -113,7 +175,7 @@
     }
 
     & a {
-      max-width: 715px;
+      //max-width: 715px;
     }
   }
 
@@ -122,6 +184,37 @@
     height: 25.2%;
   }
 
+  .goods__item-link--development {
+    background-image: url(../img/development-background-tablet@1x.png);
+  }
+
+  .goods__item-link--deploy {
+    background-image: url(../img/deploy-background-tablet@1x.png);
+  }
+
+  .goods__item-link--parts {
+    background-image: url(../img/parts-background-tablet@1x.png);
+  }
+}
+
+@media (min-resolution: 144dpi) and (max-width: $desktop-width), (max-resolution: 1.5dppx) and (max-width: $desktop-width) {
+  .goods__item-link--development {
+    background-image: url(../img/development-background-tablet@2x.webp);
+
+    //background-image: url(../img/development-background-tablet@2x.png);
+  }
+
+  .goods__item-link--deploy {
+    background-image: url(../img/deploy-background-tablet@2x.webp);
+
+    //background-image: url(../img/deploy-background-tablet@2x.png);
+  }
+
+  .goods__item-link--parts {
+    background-image: url(../img/parts-background-tablet@2x.webp);
+
+    //background-image: url(../img/parts-background-tablet@2x.png);
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -150,6 +243,18 @@
       top: 8%;
       left: 12%;
     }
+  }
+
+  .goods__item-link--development {
+    background-image: url(../img/development-background-mobile@1x.png);
+  }
+
+  .goods__item-link--deploy {
+    background-image: url(../img/deploy-background-mobile@1x.png);
+  }
+
+  .goods__item-link--parts {
+    background-image: url(../img/parts-background-mobile@1x.png);
   }
 
   .goods__item-decoration {

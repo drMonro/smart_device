@@ -2,21 +2,21 @@
 
 // Аккордеон
 
-var AccordionCheckBoxes = document.querySelectorAll(".accordion__checkbox");
+var AccordionCheckBoxes = document.querySelectorAll(".accordion__button");
 
-var accordionSetup = function() {
+var accordionSetup = function () {
   AccordionCheckBoxes.forEach(function (checkbox) {
-    checkbox.addEventListener('change', function (evt) {
+    checkbox.addEventListener('click', function (evt) {
       evt.preventDefault();
-      if (checkbox.closest('.accordion__checkbox').classList.contains("accordion__checkbox-active")) {
+      if (checkbox.closest('.accordion__button').classList.contains("accordion__button-active")) {
         AccordionCheckBoxes.forEach(function (accordion) {
-          accordion.classList.remove("accordion__checkbox-active");
+          accordion.classList.remove("accordion__button-active");
         });
       } else {
         AccordionCheckBoxes.forEach(function (accordion) {
-          accordion.classList.remove("accordion__checkbox-active");
+          accordion.classList.remove("accordion__button-active");
         });
-        checkbox.classList.add("accordion__checkbox-active");
+        checkbox.classList.add("accordion__button-active");
       }
     });
   });
@@ -27,16 +27,16 @@ var isStorageSupport = true;
 var name_storage = "";
 var phone_storage = "";
 var question_storage = "";
-
 var popup = document.querySelector(".modal");
-var name = popup.querySelector("[name=name]");
-var phone = popup.querySelector("[name=phone-number]");
-var question = popup.querySelector("[name=question]");
-
+var body = document.querySelector("body");
 var modalButton = document.querySelector(".page-header__button");
 var closeModalButton = popup.querySelector(".modal__close-button");
-var nameInput = popup.querySelector(".modal__input--name");
+var nameInput = document.getElementById("name");
 var PhoneInputs = document.querySelectorAll("[name=phone-number]");
+var NameInputs = document.querySelectorAll("[name=name]");
+var QuestionInputs = document.querySelectorAll("[name=question]");
+var Forms = document.querySelectorAll("form");
+
 
 try {
   name_storage = localStorage.getItem("name");
@@ -56,6 +56,42 @@ try {
   isStorageSupport = false;
 }
 
+
+var inputsSetup = function (nameInputs, phoneInputs, questionInputs, forms) {
+  nameInputs.forEach(function (nameInput) {
+    if (name_storage) {
+      nameInput.value = name_storage;
+    }
+  });
+
+  phoneInputs.forEach(function (phoneInput) {
+    if (phone_storage) {
+      phoneInput.value = phone_storage;
+    }
+  });
+
+  questionInputs.forEach(function (questionInput) {
+    if (question_storage) {
+      questionInput.value = question_storage;
+    }
+  });
+
+  forms.forEach(function (form) {
+    var name = form.querySelector("[name=name]");
+    var phone = form.querySelector("[name=phone-number]");
+    var question = form.querySelector("[name=question]");
+
+    form.addEventListener("submit", function () {
+      if (isStorageSupport) {
+        localStorage.setItem("name", name.value);
+        localStorage.setItem("phone", phone.value);
+        localStorage.setItem("question", question.value);
+      }
+    });
+  });
+};
+
+
 var isClickOutside = function (evt, cssSelector) {
   var target = evt.target;
   var element = target.closest(cssSelector);
@@ -65,6 +101,7 @@ var isClickOutside = function (evt, cssSelector) {
 var onSuccessWindowOutsideCLick = function (evt) {
   if (isClickOutside(evt, '.modal__form')) {
     popup.classList.remove("modal--show");
+    body.style.overflow="auto";
   }
 };
 
@@ -92,7 +129,8 @@ var elmYPosition = function (eID) {
   while (node.offsetParent && node.offsetParent != document.body) {
     node = node.offsetParent;
     y += node.offsetTop;
-  } return y;
+  }
+  return y;
 };
 
 var smoothScroll = function (eID) {
@@ -100,7 +138,8 @@ var smoothScroll = function (eID) {
   var stopY = elmYPosition(eID);
   var distance = stopY > startY ? stopY - startY : startY - stopY;
   if (distance < 100) {
-    scrollTo(0, stopY); return;
+    scrollTo(0, stopY);
+    return;
   }
   var speed = Math.round(distance / 100);
   if (speed >= 10) speed = 30;
@@ -108,18 +147,23 @@ var smoothScroll = function (eID) {
   var leapY = stopY > startY ? startY + step : startY - step;
   var timer = 0;
   if (stopY > startY) {
-    for ( var i=startY; i<stopY; i+=step ) {
-      setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-      leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-    } return;
+    for (var i = startY; i < stopY; i += step) {
+      setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+      leapY += step;
+      if (leapY > stopY) leapY = stopY;
+      timer++;
+    }
+    return;
   }
-  for ( var i=startY; i>stopY; i-=step ) {
-    setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-    leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+  for (var i = startY; i > stopY; i -= step) {
+    setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+    leapY -= step;
+    if (leapY < stopY) leapY = stopY;
+    timer++;
   }
 };
 
-var scrollSetup = function(scrollInputs, scrollDestination) {
+var scrollSetup = function (scrollInputs, scrollDestination) {
   scrollInputs.forEach(function (scrollButton) {
     scrollButton.addEventListener('click', function () {
       smoothScroll(scrollDestination);
@@ -131,7 +175,6 @@ var scrollSetup = function(scrollInputs, scrollDestination) {
 // Валидация телефона
 
 var phoneBeginning = '+7(';
-
 var phoneMask = {
   mask: '+7(CCC)NNNNNNN',
   blocks: {
@@ -143,13 +186,11 @@ var phoneMask = {
     }
   }
 };
-
 var phoneValidationSetup = function (phoneInputs, inputMask) {
-
   phoneInputs.forEach(function (phoneInput) {
     var cellularPhone = new IMask(phoneInput, inputMask);
     phoneInput.addEventListener('focus', function () {
-      if(cellularPhone.value === '') {
+      if (cellularPhone.value === '') {
         cellularPhone.value = phoneBeginning;
       }
     });
@@ -161,6 +202,7 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
 accordionSetup();
 scrollSetup(ScrollButtons, formSection);
 phoneValidationSetup(PhoneInputs, phoneMask);
+inputsSetup(NameInputs, PhoneInputs, QuestionInputs, Forms);
 
 
 popup.addEventListener('click', onSuccessWindowOutsideCLick);
@@ -168,21 +210,16 @@ popup.addEventListener('click', onSuccessWindowOutsideCLick);
 modalButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal--show");
-  nameInput.focus();
-  if (name_storage) {
-    name.value = name_storage;
-  }
-  if (phone_storage) {
-    phone.value = phone_storage;
-  }
-  if (question_storage) {
-    question.value = question_storage;
+  body.style.overflow="hidden";
+  if (nameInput) {
+    nameInput.focus();
   }
 });
 
 closeModalButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal--show");
+  body.style.overflow="auto";
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -190,6 +227,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (popup.classList.contains("modal--show")) {
       popup.classList.remove("modal--show");
+      body.style.overflow="auto";
     }
   }
 });

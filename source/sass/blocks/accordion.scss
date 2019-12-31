@@ -1,6 +1,6 @@
 .accordion {
 
-  & label {
+  & button {
     font-family: "roboto-condensed", "Arial", sans-serif;
     font-weight: normal;
     font-size: 15px;
@@ -10,9 +10,13 @@
     text-transform: uppercase;
     display: inline-block;
     margin-bottom: 26px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
   }
 
-  & input {
+  & button:before {
     display: none;
   }
 
@@ -110,26 +114,16 @@
 
   .accordion {
 
-    & label {
-      display: block;
-      position: relative;
-      margin-bottom: 23px;
-    }
-
     .accordion__list-wrapper {
       width: 250px;
     }
 
-    & input {
-      display: block;
+    & button {
+      position: relative;
     }
 
-    & input:focus + label:after {
-      box-shadow: 0 0 5px 2px $blue;
-    }
-
-    & input + label:after,
-    & input + label:hover:after {
+    & button:after,
+    & button:hover:after {
       content: '';
       position: absolute;
       width: 16px;
@@ -141,7 +135,7 @@
       background-repeat: no-repeat;
     }
 
-    & input.accordion__checkbox-active + label:after {
+    & button.accordion__button-active:after {
       content: '';
       position: absolute;
       width: 16px;
@@ -152,7 +146,7 @@
       background-repeat: no-repeat;
     }
 
-    & input.accordion__checkbox-active ~ div {
+    & button.accordion__button-active ~ div {
       display: block;
       min-height: 156px;
     }
@@ -162,10 +156,10 @@
       overflow: hidden;
       position: relative;
       z-index: 10;
-      //padding-top: 20px;
+      padding-top: 20px;
     }
 
-    & input ~ div {
+    & button ~ div {
       display: none;
     }
 
@@ -174,10 +168,6 @@
   .accordion--second {
     & ul {
       margin-top: 15px;
-    }
-
-    & li {
-      //width: 80%;
     }
   }
 

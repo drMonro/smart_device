@@ -17,20 +17,29 @@
   //width: 675px;
   width: 35%;
   & > * {
-    padding-left: 37.3%;
-    box-sizing: border-box;
+    padding-right: 50px;
+    //padding-left: 37.3%;
+    //box-sizing: border-box;
   }
 }
 
 .page-footer__left-top-content {
   padding-top: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   & ul {
     width: 112px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    max-width: 130px;
+    flex-wrap: wrap;
+  }
+
+  & li {
+    margin-right: 10px;
   }
 }
 
@@ -93,7 +102,8 @@
 }
 
 .page-footer__middle-bottom-content {
-  text-align: center;
+
+  padding-left: 23%;
   padding-right: 14%;
 }
 
