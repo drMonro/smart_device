@@ -1,8 +1,7 @@
 .page-footer {
   width: 100%;
   min-width: 320px;
-  background-color: #FAFAFA;
-  //background-color: red;
+  background-color: #fafafa;
   margin-top: auto;
 }
 
@@ -15,14 +14,7 @@
 }
 
 .page-footer__left-wrapper {
-  //width: 675px;
   width: 35%;
-
-  & > * {
-    //padding-right: 40px;
-    //padding-left: 37.3%;
-    //box-sizing: border-box;
-  }
 }
 
 .page-footer__left-top-content {
@@ -94,20 +86,13 @@
     position: relative;
     display: inline-block;
   }
-
-  & p {
-    //position: relative;
-    //right: 42px;
-  }
 }
 
 .page-footer__middle-wrapper {
   width: 658px;
-  //width: 34.3%;
 }
 
 .page-footer__right-wrapper {
-  //width: 587px;
   width: 30.5%;
 
   & > * {
@@ -131,7 +116,6 @@
 }
 
 .page-footer__link {
-
   &:hover {
     color: $blue;
   }
@@ -154,7 +138,6 @@
   }
 
   .page-footer__left-wrapper {
-    //justify-content: space-between;
     align-items: center;
     position: relative;
     display: flex;
@@ -163,7 +146,6 @@
     padding-bottom: 20px;
     padding-top: 3px;
     padding-left: 3.3%;
-    padding-right: 3.3%;
     padding-right: 19.5%;
     margin-bottom: 35px;
 
@@ -193,7 +175,6 @@
     text-align: left;
     padding-top: 20px;
     min-height: 40px;
-    //height: 69px;
   }
 
   .page-footer__right-wrapper > * {
@@ -212,9 +193,7 @@
 
   .page-footer__left-top-content {
     justify-content: space-between;
-    width: 65%;
     width: 300px;
-
     flex-direction: row;
     border: none;
     height: 57px;
@@ -240,14 +219,13 @@
   .page-footer__middle-bottom-content {
     padding-left: 7%;
   }
+
   .page-footer__middle-bottom-content {
     padding-bottom: 0;
   }
-
 }
 
 @media (max-width: $tablet-width) {
-
   .page-footer {
     position: relative;
     padding-bottom: 0;
@@ -263,7 +241,6 @@
     padding: 0;
     padding-top: 45px;
     padding-bottom: 113px;
-
   }
 
   .page-footer__left-top-content {
@@ -278,7 +255,7 @@
       transform: translateX(-50%);
       left: 50%;
       bottom: 48px;
-      top: auto
+      top: auto;
     }
 
     & li {
@@ -342,7 +319,5 @@
 
   .page-footer__middle-top-content {
     padding-bottom: 2px;
-    //padding-bottom: 5px;
   }
 }
-

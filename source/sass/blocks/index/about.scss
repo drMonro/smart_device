@@ -13,7 +13,7 @@
     content: "";
     width: 220px;
     height: 317px;
-    background-image: url(../img/../img/year-2005-desktop@1x.webp), url(../img/../img/year-2005-desktop@1x.png);
+    background-image: url("../img/year-2005-desktop@1x.webp"), url("../img/year-2005-desktop@1x.png");
     background-size: cover;
     left: -18px;
     top: 6px;
@@ -65,10 +65,10 @@
   }
 }
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .about__wrapper {
     &::before {
-      background-image: url(../img/../img/year-2005-desktop@2x.webp), url(../img/../img/year-2005-desktop@2x.png);
+      background-image: url("../img/year-2005-desktop@2x.webp"), url("../img/year-2005-desktop@2x.png");
     }
   }
 }
@@ -81,7 +81,7 @@
 
 
     &::before {
-      background-image: url(../img/../img/year-2005-tablet@1x.webp), url(../img/../img/year-2005-tablet@1x.png);
+      background-image: url("../img/year-2005-tablet@1x.webp"), url("../img/year-2005-tablet@1x.png");
       width: 244px;
       height: 362px;
       left: 0;
@@ -93,7 +93,6 @@
       line-height: 140.62%;
       margin-bottom: 27px;
     }
-
   }
 
   .about__text-spoiler {
@@ -111,6 +110,7 @@
       display: none;
     }
   }
+
   .about__text--short {
     display: inline;
   }
@@ -123,10 +123,10 @@
   }
 }
 
-@media (min-resolution: 144dpi) and (max-width: $desktop-width), (min-resolution: 1.5dppx) and (max-width: $desktop-width) {
+@media (min-resolution: $retina-dpi) and (max-width: $desktop-width), (min-resolution: $retina-dppx) and (max-width: $desktop-width) {
   .about__wrapper {
     &::before {
-      background-image: url(../img/../img/year-2005-tablet@2x.webp), url(../img/../img/year-2005-tablet@2x.png);
+      background-image: url("../img/year-2005-tablet@2x.webp"), url("../img/year-2005-tablet@2x.png");
     }
   }
 }

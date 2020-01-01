@@ -49,7 +49,7 @@
   }
 
   & p {
-    color: #203C42;
+    color: #203c42;
   }
 
   & .logo__text-wrapper {
@@ -65,14 +65,12 @@
     position: static;
     padding: 0;
   }
-
-
 }
 
 @media (max-width: $tablet-width) {
-
   .logo {
     width: auto;
+
     & svg {
       width: 38px;
       height: 38px;

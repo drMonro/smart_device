@@ -20,11 +20,10 @@
   &:focus {
     background-color: $blue;
     border-color: $blue;
-    color: #fff;
+    color: #ffffff;
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
 }
-

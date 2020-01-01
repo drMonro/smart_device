@@ -1,12 +1,11 @@
 .accordion {
-
   & button {
     padding: 0;
     font-family: "roboto-condensed", "Arial", sans-serif;
     font-weight: normal;
     font-size: 15px;
     line-height: 16px;
-    color: #1B2D37;
+    color: #1b2d37;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     display: inline-block;
@@ -17,7 +16,7 @@
     text-align: left;
   }
 
-  & button:before {
+  & button::before {
     display: none;
   }
 
@@ -36,10 +35,11 @@
     height: 101px;
   }
 
-  & li, & a {
+  & li,
+  & a {
     font-size: 15px;
     line-height: 25px;
-    color: #1B2D37;
+    color: #1b2d37;
     display: inline-block;
   }
 
@@ -71,27 +71,22 @@
 }
 
 @media (max-width: $desktop-width) {
-
-
   .accordion {
     & ul {
       min-height: 180px;
     }
+
     & .accordion__list-wrapper {
       width: auto;
     }
   }
-
 }
 
 @media (max-width: $tablet-width) {
-
   .accordion {
-
-    .accordion__list-wrapper {
+    & .accordion__list-wrapper {
       width: 250px;
       padding-left: 5px;
-
     }
 
     & ul {
@@ -104,9 +99,9 @@
       margin-bottom: 24px;
     }
 
-    & button:after,
-    & button:hover:after {
-      content: '';
+    & button::after,
+    & button:hover::after {
+      content: "";
       position: absolute;
       width: 16px;
       height: 16px;
@@ -117,8 +112,8 @@
       background-repeat: no-repeat;
     }
 
-    & button.accordion__button-active:after {
-      content: '';
+    & button.accordion__button-active::after {
+      content: "";
       position: absolute;
       width: 16px;
       height: 16px;
@@ -144,7 +139,6 @@
     & button ~ div {
       display: none;
     }
-
   }
 
   .accordion--second {
@@ -152,6 +146,4 @@
       margin-top: 11px;
     }
   }
-
-
 }

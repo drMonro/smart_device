@@ -24,16 +24,15 @@
   }
 
   & li {
+    border: 1px solid #ebebeb;
     min-height: 300px;
     width: 48.8%;
     box-sizing: border-box;
-    border: 1px solid #EBEBEB;
     position: relative;
     display: block;
     padding: 25px;
     padding-top: 39.3px;
     padding-left: 41.5px;
-    //height: 100%;
     margin-bottom: 30px;
     background-color: #ffffff;
 
@@ -67,7 +66,7 @@
     color: $blue;
     font-size: 24px;
     line-height: 34px;
-    margin-bottom: 17px
+    margin-bottom: 17px;
   }
 
   & p {
@@ -125,7 +124,6 @@
 
   .advantages__list-wrapper {
     & li {
-
       width: 47.8%;
       padding-top: 23px;
       padding-left: 25px;
@@ -133,7 +131,8 @@
       padding-bottom: 20px;
     }
 
-    & li:nth-child(4n+3), li:nth-child(4n) {
+    & li:nth-child(4n+3),
+    & li:nth-child(4n) {
       align-self: flex-start;
       min-height: 232px;
     }
@@ -159,7 +158,6 @@
   .advantages__list-wrapper--top ul::before {
     display: none;
   }
-
 }
 
 @media (max-width: $tablet-width) {
@@ -172,12 +170,12 @@
 
   .advantages__list-wrapper {
     width: 100%;
+
     & li {
       width: 100%;
       min-height: 232px;
       padding-bottom: 25px;
       margin-bottom: 20px;
-
     }
 
     & span {
@@ -200,12 +198,12 @@
     padding-right: 17px;
   }
 
-
   //Ошибки в макете. Классы для PP
-  .advantages__list-item--suppliers {
-    height: 310px !important;
-  }
-  .advantages__list-item--private {
-    height: 244px !important;
-  }
+  //.advantages__list-item--suppliers {
+  //  height: 310px !important;
+  //}
+  //
+  //.advantages__list-item--private {
+  //  height: 244px !important;
+  //}
 }

@@ -69,7 +69,6 @@
 }
 
 @media (max-width: $desktop-width) {
-
   .page-header__button {
     display: none;
   }
@@ -110,11 +109,9 @@
     width: 24px;
     height: 24px;
   }
-
 }
 
 @media (max-width: $tablet-width) {
-
   .page-header {
     min-width: 320px;
   }
@@ -128,5 +125,4 @@
   .page-header__elements-wrapper {
     width: 71px;
   }
-
 }

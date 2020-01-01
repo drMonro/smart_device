@@ -78,13 +78,14 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
   margin-top: -85px;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     position: absolute;
     z-index: -1;
     content: "";
     width: 872px;
     height: 873px;
-    background-image: url(../img/advantages-big-triangle.svg);
+    background-image: url("../img/advantages-big-triangle.svg");
     right: 25.4%;
     top: 1026px;
   }
@@ -121,9 +122,5 @@ input[type="radio"].visually-hidden {
       right: -135%;
       top: 1299px;
     }
-
   }
 }
-
-
-
