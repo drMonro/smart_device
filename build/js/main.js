@@ -100,7 +100,7 @@ var isClickOutside = function (evt, cssSelector) {
 
 var onSuccessWindowOutsideCLick = function (evt) {
   if (isClickOutside(evt, '.modal__form')) {
-    popup.classList.remove("modal--show");
+    popup.classList.remove("modal--js-show");
     body.style.overflow="auto";
   }
 };
@@ -209,7 +209,7 @@ popup.addEventListener('click', onSuccessWindowOutsideCLick);
 
 modalButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.add("modal--show");
+  popup.classList.add("modal--js-show");
   body.style.overflow="hidden";
   if (nameInput) {
     nameInput.focus();
@@ -218,15 +218,15 @@ modalButton.addEventListener("click", function (evt) {
 
 closeModalButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.remove("modal--show");
+  popup.classList.remove("modal--js-show");
   body.style.overflow="auto";
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popup.classList.contains("modal--show")) {
-      popup.classList.remove("modal--show");
+    if (popup.classList.contains("modal--js-show")) {
+      popup.classList.remove("modal--js-show");
       body.style.overflow="auto";
     }
   }

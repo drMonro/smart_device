@@ -1,15 +1,14 @@
 .goods {
   background-color: $accent-dark;
   padding: 0;
-  //text-align: center;
   padding-top: 87px;
 
   & p {
+    margin: 0;
     font-family: "roboto-condensed", "Arial", sans-serif;
     font-weight: normal;
     font-size: 36px;
     line-height: 51px;
-    margin: 0;
     display: block;
     padding-left: 1.6%;
     max-width: 1200px;
@@ -21,42 +20,25 @@
 }
 
 .goods__wrapper {
-
   max-width: 1200px;
-  //max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  //padding: 0 15px;
-
-  padding-bottom: 127px;
+  padding-bottom: 107px;
   box-sizing: border-box;
 
-
   & ul {
-    //width: 100%;
     flex-wrap: wrap;
     display: flex;
-    //max-width: 1200px;
     max-width: 1200px;
-
-    //justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
-
-    //margin-left: -15px;
-
-
   }
 
   & li {
-    height: auto;
-    width: 31.5%;
     width: 370px;
     height: 620px;
-
     max-height: 620px;
-    margin-right: 2.8%;
     margin-right: 15px;
     margin-left: 15px;
     margin-bottom: 20px;
@@ -67,7 +49,6 @@
     background-size: cover;
     position: relative;
     height: 100%;
-    //width: 370px;
     display: block;
 
     &:hover {
@@ -93,23 +74,23 @@
 }
 
 .goods__item-link--development {
-  background-image: url(../img/development-background-desktop@1x.png);
+  background-image: url(../img/development-background-desktop@1x.png), url(../img/development-background-desktop@1x.webp);
 }
 
 .goods__item-link--deploy {
-  background-image: url(../img/deploy-background-desktop@1x.png);
+  background-image: url(../img/deploy-background-desktop@1x.png), url(../img/deploy-background-desktop@1x.webp);
 }
 
 .goods__item-link--parts {
-  background-image: url(../img/parts-background-desktop@1x.png);
+  background-image: url(../img/parts-background-desktop@1x.png), url(../img/parts-background-desktop@1x.webp);
 }
 
 .goods__item-decoration {
   position: absolute;
   z-index: 3;
   content: "";
-  width: 16.9%;
-  height: 10.1%;
+  width: 63px;
+  height: 63px;
   background-color: $blue;
   background-image: url(../img/arrow.svg);
   background-repeat: no-repeat;
@@ -120,36 +101,37 @@
 
 @media (min-resolution: 144dpi), (max-resolution: 1.5dppx) {
   .goods__item-link--development {
-    background-image: url(../img/development-background-desktop@2x.png);
-
-    background-image: url(../img/development-background-desktop@2x.webp);
+    background-image: url(../img/development-background-desktop@2x.png), url(../img/development-background-desktop@2x.webp);
   }
 
   .goods__item-link--deploy {
-    background-image: url(../img/deploy-background-desktop@2x.png);
-
-    background-image: url(../img/deploy-background-desktop@2x.webp);
+    background-image: url(../img/deploy-background-desktop@2x.png), url(../img/deploy-background-desktop@2x.webp);
   }
 
   .goods__item-link--parts {
-    background-image: url(../img/parts-background-desktop@2x.png);
-
-    background-image: url(../img/parts-background-desktop@2x.webp);
+    background-image: url(../img/parts-background-desktop@2x.png), url(../img/parts-background-desktop@2x.webp);
   }
 }
 
 @media (max-width: $desktop-width) {
 
-  .goods__wrapper {
-    width: 96%;
+  .goods {
     padding-top: 49px;
-    padding-bottom: 31px;
 
     & p {
       font-size: 32px;
       line-height: 140.62%;
-      padding-right: 15%;
+      //padding-right: 15%;
+      margin-left: 0;
+      padding-left: 25px;
+      margin-bottom: 53px;
+      width: 627px;
     }
+  }
+
+  .goods__wrapper {
+    width: 96%;
+    padding-bottom: 31px;
 
     & ul {
       flex-wrap: wrap;
@@ -159,8 +141,6 @@
       width: 100%;
       margin-bottom: 46px;
       max-height: 256px;
-      //display: flex;
-      //justify-content: center;
       max-width: 100%;
     }
 
@@ -173,62 +153,49 @@
       top: 15.3%;
       left: 5.9%;
     }
-
-    & a {
-      //max-width: 715px;
-    }
-  }
-
-  .goods__item-decoration {
-    width: 9%;
-    height: 25.2%;
   }
 
   .goods__item-link--development {
-    background-image: url(../img/development-background-tablet@1x.png);
+    background-image: url(../img/development-background-tablet@1x.png), url(../img/development-background-tablet@1x.webp);
   }
 
   .goods__item-link--deploy {
-    background-image: url(../img/deploy-background-tablet@1x.png);
+    background-image: url(../img/deploy-background-tablet@1x.png), url(../img/deploy-background-tablet@1x.webp);
   }
 
   .goods__item-link--parts {
-    background-image: url(../img/parts-background-tablet@1x.png);
+    background-image: url(../img/parts-background-tablet@1x.png), url(../img/parts-background-tablet@1x.webp);
   }
+
 }
 
 @media (min-resolution: 144dpi) and (max-width: $desktop-width), (max-resolution: 1.5dppx) and (max-width: $desktop-width) {
   .goods__item-link--development {
-    background-image: url(../img/development-background-tablet@2x.webp);
-
-    //background-image: url(../img/development-background-tablet@2x.png);
+    background-image: url(../img/development-background-tablet@2x.png), url(../img/development-background-tablet@2x.webp);
   }
 
   .goods__item-link--deploy {
-    background-image: url(../img/deploy-background-tablet@2x.webp);
-
-    //background-image: url(../img/deploy-background-tablet@2x.png);
+    background-image: url(../img/deploy-background-tablet@2x.png), url(../img/deploy-background-tablet@2x.webp);
   }
 
   .goods__item-link--parts {
-    background-image: url(../img/parts-background-tablet@2x.webp);
-
-    //background-image: url(../img/parts-background-tablet@2x.png);
+    background-image: url(../img/parts-background-tablet@2x.png), url(../img/parts-background-tablet@2x.webp);
   }
+
 }
 
 @media (max-width: $tablet-width) {
 
+  .goods p {
+    font-size: 28px;
+    margin-bottom: 43px;
+    padding: 0 23px;
+    width: auto;
+  }
+
   .goods__wrapper {
     width: 97%;
     padding-bottom: 34px;
-
-    & p {
-      font-size: 28px;
-      padding: 0;
-      margin-bottom: 43px;
-      padding-left: 10px;
-    }
 
     & li {
       margin-bottom: 30px;
@@ -241,24 +208,35 @@
 
     & span {
       top: 8%;
-      left: 12%;
+      left: 11%;
     }
   }
 
   .goods__item-link--development {
-    background-image: url(../img/development-background-mobile@1x.png);
+    background-image: url(../img/development-background-mobile@1x.png), url(../img/development-background-mobile@1x.webp);
   }
 
   .goods__item-link--deploy {
-    background-image: url(../img/deploy-background-mobile@1x.png);
+    background-image: url(../img/deploy-background-mobile@1x.png), url(../img/deploy-background-mobile@1x.webp);
   }
 
   .goods__item-link--parts {
-    background-image: url(../img/parts-background-mobile@1x.png);
+    background-image: url(../img/parts-background-mobile@1x.png), url(../img/parts-background-mobile@1x.webp);
   }
 
-  .goods__item-decoration {
-    width: 22%;
+}
+
+@media (min-resolution: 144dpi) and (max-width: $tablet-width), (max-resolution: 1.5dppx) and (max-width: $tablet-width) {
+  .goods__item-link--development {
+    background-image: url(../img/development-background-mobile@2x.png), url(../img/development-background-mobile@2x.webp);
+  }
+
+  .goods__item-link--deploy {
+    background-image: url(../img/deploy-background-mobile@2x.png), url(../img/deploy-background-mobile@2x.webp);
+  }
+
+  .goods__item-link--parts {
+    background-image: url(../img/parts-background-mobile@2x.png), url(../img/parts-background-mobile@2x.webp);
   }
 
 }

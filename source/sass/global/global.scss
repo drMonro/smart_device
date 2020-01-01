@@ -42,8 +42,14 @@ body {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-  &::-webkit-scrollbar { width: 0; }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 img {
@@ -65,16 +71,6 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-
-
-
-.index-body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 .main {
@@ -102,7 +98,6 @@ input[type="radio"].visually-hidden {
 }
 
 
-
 @media (max-width: $desktop-width) {
   .main {
     margin-top: -72px;
@@ -110,6 +105,7 @@ input[type="radio"].visually-hidden {
     &::after {
       display: none;
     }
+
     &::before {
       right: -40.9%;
       top: 778px;
@@ -120,6 +116,7 @@ input[type="radio"].visually-hidden {
 @media (max-width: $tablet-width) {
   .main {
     margin-top: -55px;
+
     &::before {
       right: -135%;
       top: 1299px;

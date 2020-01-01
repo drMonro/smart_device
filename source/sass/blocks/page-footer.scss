@@ -2,6 +2,7 @@
   width: 100%;
   min-width: 320px;
   background-color: #FAFAFA;
+  //background-color: red;
   margin-top: auto;
 }
 
@@ -16,8 +17,9 @@
 .page-footer__left-wrapper {
   //width: 675px;
   width: 35%;
+
   & > * {
-    padding-right: 50px;
+    //padding-right: 40px;
     //padding-left: 37.3%;
     //box-sizing: border-box;
   }
@@ -27,19 +29,22 @@
   padding-top: 3px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+
   & ul {
-    width: 112px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    max-width: 130px;
+    max-width: 137px;
     flex-wrap: wrap;
+    position: relative;
+    left: -21px;
+    width: 137px;
   }
 
   & li {
-    margin-right: 10px;
+    margin-right: 16px;
   }
 }
 
@@ -47,7 +52,7 @@
 .page-footer__middle-top-content,
 .page-footer__right-top-content {
   box-sizing: border-box;
-  height: 203px;
+  min-height: 203px;
   border-bottom: 1px solid rgba(98, 105, 98, 0.2);
 }
 
@@ -61,7 +66,7 @@
   opacity: 0.5;
   padding-top: 14px;
   padding-bottom: 13px;
-  min-height: 51px;
+  min-height: 26px;
   text-transform: uppercase;
 
   & p {
@@ -80,10 +85,19 @@
 
 .page-footer__left-bottom-content {
   display: flex;
+  justify-content: flex-end;
+  padding-right: 6.1%;
+  padding-left: 20px;
+
   & span {
-    right: -75px;
+    right: -77px;
     position: relative;
     display: inline-block;
+  }
+
+  & p {
+    //position: relative;
+    //right: 42px;
   }
 }
 
@@ -95,6 +109,7 @@
 .page-footer__right-wrapper {
   //width: 587px;
   width: 30.5%;
+
   & > * {
     padding-right: 10px;
     box-sizing: border-box;
@@ -102,13 +117,13 @@
 }
 
 .page-footer__middle-bottom-content {
-
-  padding-left: 23%;
+  padding-left: 27%;
   padding-right: 14%;
 }
 
 .page-footer__right-bottom-content {
   text-align: center;
+
   & p {
     position: relative;
     right: 53px;
@@ -139,6 +154,7 @@
   }
 
   .page-footer__left-wrapper {
+    //justify-content: space-between;
     align-items: center;
     position: relative;
     display: flex;
@@ -147,7 +163,10 @@
     padding-bottom: 20px;
     padding-top: 3px;
     padding-left: 3.3%;
+    padding-right: 3.3%;
+    padding-right: 19.5%;
     margin-bottom: 35px;
+
     & > * {
       padding: 0;
     }
@@ -173,8 +192,8 @@
     padding-left: 7%;
     text-align: left;
     padding-top: 20px;
-    min-height: 35px;
-    height: 69px;
+    min-height: 40px;
+    //height: 69px;
   }
 
   .page-footer__right-wrapper > * {
@@ -192,15 +211,19 @@
   }
 
   .page-footer__left-top-content {
+    justify-content: space-between;
+    width: 65%;
+    width: 300px;
+
+    flex-direction: row;
     border: none;
     height: 57px;
     min-height: 57px;
-    margin-right: 87px;
 
     & ul {
+      right: -0.4%;
+      left: auto;
       position: absolute;
-      right: 21px;
-      top: 14px;
     }
   }
 
@@ -217,6 +240,9 @@
   .page-footer__middle-bottom-content {
     padding-left: 7%;
   }
+  .page-footer__middle-bottom-content {
+    padding-bottom: 0;
+  }
 
 }
 
@@ -228,28 +254,36 @@
   }
 
   .page-footer__wrapper {
-    padding-top: 47px;
-    padding-bottom: 10px;
+    padding: 0;
   }
 
   .page-footer__left-wrapper {
     flex-wrap: wrap;
-    padding-bottom: 111px;
-    padding-left: 0;
-    padding-top: 0;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
+    padding: 0;
+    padding-top: 45px;
+    padding-bottom: 113px;
+
   }
 
   .page-footer__left-top-content {
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
 
     & ul {
+      width: 129px;
       transform: translateX(-50%);
       left: 50%;
       bottom: 48px;
       top: auto
+    }
+
+    & li {
+      margin-right: 8px;
+      margin-left: 8px;
     }
   }
 
@@ -276,11 +310,11 @@
     padding: 0;
     width: 100%;
     text-align: center;
-    bottom: 8px;
+    bottom: 40px;
   }
 
   .page-footer__right-wrapper {
-    padding-top: 29px;
+    padding-top: 26px;
   }
 
   .page-footer__right-top-content {
@@ -302,12 +336,13 @@
   .page-footer__right-top-content {
     min-height: auto;
     height: auto;
-    padding-left: 5%;
+    padding-left: 9px;
     padding-bottom: 9px;
   }
 
   .page-footer__middle-top-content {
-    padding-bottom: 2px
+    padding-bottom: 2px;
+    //padding-bottom: 5px;
   }
 }
 

@@ -134,19 +134,12 @@
   display: flex;
   justify-content: space-between;
   width: 96%;
-  margin: 0;
-  padding: 0;
 }
 
 .form__set.form__set--question {
   width: 100%;
   max-width: 574px;
   box-sizing: border-box;
-}
-
-.form__question-wrapper {
-  margin: 0;
-  padding: 0;
 }
 
 .form__submit-wrapper {
@@ -273,7 +266,7 @@
   }
 
   .form__set.form__set--contacts {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .form__set.form__set--question {

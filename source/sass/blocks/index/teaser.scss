@@ -3,8 +3,7 @@
   overflow: hidden;
   background-color: $accent-dark;
   background-size: cover;
-  background-image: url(../img/teaser-background-desktop@1x.png);
-  background-image: url(../img/teaser-background-desktop@1x.webp);
+  background-image: url(../img/teaser-background-desktop@1x.webp), url(../img/teaser-background-desktop@1x.png);
   background-repeat: no-repeat;
   min-height: 878px;
 }
@@ -132,8 +131,7 @@
 
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .teaser {
-    background-image: url(../img/teaser-background-desktop@2x.png);
-    background-image: url(../img/teaser-background-desktop@2x.webp);
+    background-image: url(../img/teaser-background-desktop@2x.webp), url(../img/teaser-background-desktop@2x.png);
   }
 }
 
@@ -145,8 +143,7 @@
 
   .teaser {
     min-height: 686px;
-    background-image: url(../img/teaser-background-tablet@1x.png);
-    background-image: url(../img/teaser-background-tablet@1x.webp);
+    background-image: url(../img/teaser-background-tablet@1x.webp), url(../img/teaser-background-tablet@1x.png);
     background-size: cover;
   }
 
@@ -158,7 +155,6 @@
   }
 
   .teaser__text-wrapper {
-    //width: 100%;
     padding: 0;
 
     & h1 {
@@ -211,18 +207,15 @@
 
 @media (min-resolution: 144dpi) and (max-width: $desktop-width), (min-resolution: 1.5dppx) and (max-width: $desktop-width) {
   .teaser {
-    background-image: url(../img/teaser-background-tablet@2x.png);
-    background-image: url(../img/teaser-background-tablet@2x.webp);
+    background-image: url(../img/teaser-background-tablet@2x.webp), url(../img/teaser-background-tablet@2x.png);
   }
-
 }
 
 @media (max-width: $tablet-width) {
 
   .teaser {
     min-height: 647px;
-    background-image: url(../img/teaser-background-mobile@1x.png);
-    background-image: url(../img/teaser-background-mobile@1x.webp);
+    background-image: url(../img/teaser-background-mobile@1x.webp), url(../img/teaser-background-mobile@1x.png);
   }
 
   .teaser__wrapper {
@@ -294,7 +287,6 @@
 
 @media (min-resolution: 144dpi) and (max-width: $tablet-width), (min-resolution: 1.5dppx) and (max-width: $tablet-width) {
   .teaser {
-    background-image: url(../img/teaser-background-mobile@2x.png);
-    background-image: url(../img/teaser-background-mobile@2x.webp);
+    background-image: url(../img/teaser-background-mobile@2x.webp), url(../img/teaser-background-mobile@2x.png);
   }
 }

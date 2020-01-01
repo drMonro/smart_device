@@ -13,7 +13,7 @@
     content: "";
     width: 220px;
     height: 317px;
-    background-image: url("../img/year-2005-desktop.png");
+    background-image: url(../img/../img/year-2005-desktop@1x.webp), url(../img/../img/year-2005-desktop@1x.png);
     background-size: cover;
     left: -18px;
     top: 6px;
@@ -62,7 +62,14 @@
   &:hover {
     background-color: $blue;
     color: #ffffff;
+  }
+}
 
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .about__wrapper {
+    &::before {
+      background-image: url(../img/../img/year-2005-desktop@2x.webp), url(../img/../img/year-2005-desktop@2x.png);
+    }
   }
 }
 
@@ -74,7 +81,7 @@
 
 
     &::before {
-      background-image: url(../img/year-2005-tablet.png);
+      background-image: url(../img/../img/year-2005-tablet@1x.webp), url(../img/../img/year-2005-tablet@1x.png);
       width: 244px;
       height: 362px;
       left: 0;
@@ -116,6 +123,14 @@
   }
 }
 
+@media (min-resolution: 144dpi) and (max-width: $desktop-width), (min-resolution: 1.5dppx) and (max-width: $desktop-width) {
+  .about__wrapper {
+    &::before {
+      background-image: url(../img/../img/year-2005-tablet@2x.webp), url(../img/../img/year-2005-tablet@2x.png);
+    }
+  }
+}
+
 @media (max-width: $tablet-width) {
   .about__wrapper {
     padding-left: 14px;
@@ -132,7 +147,7 @@
     }
 
     & > p {
-      margin-bottom: 42px;
+      margin-bottom: 40px;
       padding-left: 3px;
     }
   }
