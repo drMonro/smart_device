@@ -53,11 +53,11 @@
       <div class="teaser__text-wrapper">
         <h1>Печатные платы</h1>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <button class="button teaser__button button--js-scroll" type="button">
+        <button class="button teaser__button js-scroll-to-form" type="button">
           <span>Получить бесплатную консультацию</span>
           <span>Бесплатная консультация</span>
         </button>
-        <button class="button teaser__scroll-button button--js-scroll" type="button">Скролл вниз</button>
+        <button class="button teaser__scroll-button js-scroll-to-advantages" type="button">Скролл вниз</button>
       </div>
       <div class="teaser__image-wrapper">
         <picture>
@@ -70,7 +70,7 @@
     </div>
   </section>
 
-  <section class="advantages">
+  <section class="advantages js-advantages-position" id="js-advantages-position">
     <h2 class="visually-hidden">Преимущества компании «Smart Device».</h2>
     <div class="advantages__list-wrapper">
       <ul>
@@ -82,7 +82,7 @@
           <p>Усовершенствованная логистическая система позволяет нам просчитывать
             стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
         </li>
-        <li class="advantages__list-item--suppliers">
+        <li>
           <svg width="35" height="35">
             <use xlink:href="#icon-hired"></use>
           </svg>
@@ -98,7 +98,7 @@
           <span>Полная конфиденциальность</span>
           <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
         </li>
-        <li class="advantages__list-item--private">
+        <li>
           <svg width="35" height="35">
             <use xlink:href="#icon-tag"></use>
           </svg>
@@ -158,7 +158,7 @@
     </div>
   </section>
 
-  <section class="form" id="form--js">
+  <section class="form" id="js-form-position">
 
     <h2 class="visually-hidden">Обратная связь с компаней «Smart Device».</h2>
 
@@ -173,7 +173,7 @@
         </picture>
       </div>
 
-      <form class="form__content js-form" action="https://echo.htmlacademy.ru">
+      <form class="form__content js-form-position" action="https://echo.htmlacademy.ru">
 
         <p>Остались вопросы? Задайте их нам!</p>
         <span>Мы проконсультируем Вас бесплатно</span>
@@ -336,7 +336,9 @@
       </div>
 
       <div class="page-footer__right-bottom-content">
-        <p>Developed by wow studio </p>
+        <p>Developed by
+          <a href="#" class="page-footer__link">wow studio</a>
+        </p>
       </div>
     </div>
 
@@ -348,7 +350,7 @@
   <h2 class="visually-hidden">Обратная связь с компаней «Smart Device».</h2>
 
   <form class="modal__form js-form" action="https://echo.htmlacademy.ru">
-    <button class="modal__close-button" type="button">
+    <button class="button modal__close-button" type="button">
       <svg width="16.56" height="16.56">
         <use xlink:href="#icon-close"></use>
       </svg>
@@ -356,6 +358,7 @@
 
     <p>Закажите звонок</p>
     <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
+
     <label class=visually-hidden for="name">Поле ввода имени</label>
     <input type="text" name="name" id="name" placeholder="Имя" required autocomplete="on">
     <label class=visually-hidden for="phone">Поле ввода телефона</label>

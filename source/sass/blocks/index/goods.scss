@@ -72,15 +72,15 @@
 }
 
 .goods__item-link--development {
-  background-image: url("../img/development-background-desktop@1x.png"), url("../img/development-background-desktop@1x.wepb");
+  background-image: url("../img/development-background-desktop@1x.png"), url("../img/development-background-desktop@1x.webp");
 }
 
 .goods__item-link--deploy {
-  background-image: url("../img/deploy-background-desktop@1x.png"), url("../img/deploy-background-desktop@1x.wepb");
+  background-image: url("../img/deploy-background-desktop@1x.png"), url("../img/deploy-background-desktop@1x.webp");
 }
 
 .goods__item-link--parts {
-  background-image: url("../img/parts-background-desktop@1x.png"), url("../img/parts-background-desktop@1x.wepb");
+  background-image: url("../img/parts-background-desktop@1x.png"), url("../img/parts-background-desktop@1x.webp");
 }
 
 .goods__item-decoration {
@@ -99,15 +99,15 @@
 
 @media (min-resolution: $retina-dpi), (max-resolution: $retina-dppx) {
   .goods__item-link--development {
-    background-image: url("../img/development-background-desktop@2x.png"), url("../img/development-background-desktop@2x.wepb");
+    background-image: url("../img/development-background-desktop@2x.png"), url("../img/development-background-desktop@2x.webp");
   }
 
   .goods__item-link--deploy {
-    background-image: url("../img/deploy-background-desktop@2x.png"), url("../img/deploy-background-desktop@2x.wepb");
+    background-image: url("../img/deploy-background-desktop@2x.png"), url("../img/deploy-background-desktop@2x.webp");
   }
 
   .goods__item-link--parts {
-    background-image: url("../img/parts-background-desktop@2x.png"), url("../img/parts-background-desktop@2x.wepb");
+    background-image: url("../img/parts-background-desktop@2x.png"), url("../img/parts-background-desktop@2x.webp");
   }
 }
 
@@ -152,29 +152,29 @@
   }
 
   .goods__item-link--development {
-    background-image: url("../img/development-background-tablet@1x.png"), url("../img/development-background-tablet@1x.wepb");
+    background-image: url("../img/development-background-tablet@1x.png"), url("../img/development-background-tablet@1x.webp");
   }
 
   .goods__item-link--deploy {
-    background-image: url("../img/deploy-background-tablet@1x.png"), url("../img/deploy-background-tablet@1x.wepb");
+    background-image: url("../img/deploy-background-tablet@1x.png"), url("../img/deploy-background-tablet@1x.webp");
   }
 
   .goods__item-link--parts {
-    background-image: url("../img/parts-background-tablet@1x.png"), url("../img/parts-background-tablet@1x.wepb");
+    background-image: url("../img/parts-background-tablet@1x.png"), url("../img/parts-background-tablet@1x.webp");
   }
 }
 
 @media (min-resolution: $retina-dpi) and (max-width: $desktop-width), (max-resolution: $retina-dppx) and (max-width: $desktop-width) {
   .goods__item-link--development {
-    background-image: url("../img/development-background-tablet@2x.png"), url("../img/development-background-tablet@2x.wepb");
+    background-image: url("../img/development-background-tablet@2x.png"), url("../img/development-background-tablet@2x.webp");
   }
 
   .goods__item-link--deploy {
-    background-image: url("../img/deploy-background-tablet@2x.png"), url("../img/deploy-background-tablet@2x.wepb");
+    background-image: url("../img/deploy-background-tablet@2x.png"), url("../img/deploy-background-tablet@2x.webp");
   }
 
   .goods__item-link--parts {
-    background-image: url("../img/parts-background-tablet@2x.png"), url("../img/parts-background-tablet@2x.wepb");
+    background-image: url("../img/parts-background-tablet@2x.png"), url("../img/parts-background-tablet@2x.webp");
   }
 }
 
@@ -206,28 +206,28 @@
   }
 
   .goods__item-link--development {
-    background-image: url("../img/development-background-mobile@1x.png"), url("../img/development-background-mobile@1x.wepb");
+    background-image: url("../img/development-background-mobile@1x.png"), url("../img/development-background-mobile@1x.webp");
   }
 
   .goods__item-link--deploy {
-    background-image: url("../img/deploy-background-mobile@1x.png"), url("../img/deploy-background-mobile@1x.wepb");
+    background-image: url("../img/deploy-background-mobile@1x.png"), url("../img/deploy-background-mobile@1x.webp");
   }
 
   .goods__item-link--parts {
-    background-image: url("../img/parts-background-mobile@1x.png"), url("../img/parts-background-mobile@1x.wepb");
+    background-image: url("../img/parts-background-mobile@1x.png"), url("../img/parts-background-mobile@1x.webp");
   }
 }
 
 @media (min-resolution: $retina-dpi) and (max-width: $tablet-width), (max-resolution: $retina-dppx) and (max-width: $tablet-width) {
   .goods__item-link--development {
-    background-image: url("../img/development-background-mobile@2x.png"), url("../img/development-background-mobile@2x.wepb");
+    background-image: url("../img/development-background-mobile@2x.png"), url("../img/development-background-mobile@2x.webp");
   }
 
   .goods__item-link--deploy {
-    background-image: url("../img/deploy-background-mobile@2x.png"), url("../img/deploy-background-mobile@2x.wepb");
+    background-image: url("../img/deploy-background-mobile@2x.png"), url("../img/deploy-background-mobile@2x.webp");
   }
 
   .goods__item-link--parts {
-    background-image: url("../img/parts-background-mobile@2x.png"), url("../img/parts-background-mobile@2x.wepb");
+    background-image: url("../img/parts-background-mobile@2x.png"), url("../img/parts-background-mobile@2x.webp");
   }
 }

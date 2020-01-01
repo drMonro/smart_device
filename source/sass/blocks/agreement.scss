@@ -2,8 +2,10 @@
   position: relative;
   padding-left: 32px;
   width: 225px;
+  cursor: pointer;
 
   & label {
+    cursor: pointer;
     font-size: 14px;
     line-height: 16px;
   }

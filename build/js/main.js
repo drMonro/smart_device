@@ -2,21 +2,21 @@
 
 // Аккордеон
 
-var AccordionCheckBoxes = document.querySelectorAll(".accordion__button");
+var AccordionCheckBoxes = document.querySelectorAll('.accordion__button');
 
 var accordionSetup = function () {
   AccordionCheckBoxes.forEach(function (checkbox) {
     checkbox.addEventListener('click', function (evt) {
       evt.preventDefault();
-      if (checkbox.closest('.accordion__button').classList.contains("accordion__button-active")) {
+      if (checkbox.closest('.accordion__button').classList.contains('accordion__button-active')) {
         AccordionCheckBoxes.forEach(function (accordion) {
-          accordion.classList.remove("accordion__button-active");
+          accordion.classList.remove('accordion__button-active');
         });
       } else {
         AccordionCheckBoxes.forEach(function (accordion) {
-          accordion.classList.remove("accordion__button-active");
+          accordion.classList.remove('accordion__button-active');
         });
-        checkbox.classList.add("accordion__button-active");
+        checkbox.classList.add('accordion__button-active');
       }
     });
   });
@@ -24,34 +24,34 @@ var accordionSetup = function () {
 
 // Форма
 var isStorageSupport = true;
-var name_storage = "";
-var phone_storage = "";
-var question_storage = "";
-var popup = document.querySelector(".modal");
-var body = document.querySelector("body");
-var modalButton = document.querySelector(".page-header__button");
-var closeModalButton = popup.querySelector(".modal__close-button");
-var nameInput = document.getElementById("name");
-var PhoneInputs = document.querySelectorAll("[name=phone-number]");
-var NameInputs = document.querySelectorAll("[name=name]");
-var QuestionInputs = document.querySelectorAll("[name=question]");
-var Forms = document.querySelectorAll("form");
+var name_storage = '';
+var phone_storage = '';
+var question_storage = '';
+var popup = document.querySelector('.modal');
+var body = document.querySelector('body');
+var modalButton = document.querySelector('.page-header__button');
+var closeModalButton = popup.querySelector('.modal__close-button');
+var nameInput = document.getElementById('name');
+var PhoneInputs = document.querySelectorAll('[name=phone-number]');
+var NameInputs = document.querySelectorAll('[name=name]');
+var QuestionInputs = document.querySelectorAll('[name=question]');
+var Forms = document.querySelectorAll('form');
 
 
 try {
-  name_storage = localStorage.getItem("name");
+  name_storage = localStorage.getItem('name');
 } catch (err) {
   isStorageSupport = false;
 }
 
 try {
-  phone_storage = localStorage.getItem("phone-number");
+  phone_storage = localStorage.getItem('phone-number');
 } catch (err) {
   isStorageSupport = false;
 }
 
 try {
-  question_storage = localStorage.getItem("question");
+  question_storage = localStorage.getItem('question');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -77,15 +77,15 @@ var inputsSetup = function (nameInputs, phoneInputs, questionInputs, forms) {
   });
 
   forms.forEach(function (form) {
-    var name = form.querySelector("[name=name]");
-    var phone = form.querySelector("[name=phone-number]");
-    var question = form.querySelector("[name=question]");
+    var name = form.querySelector('[name=name]');
+    var phone = form.querySelector('[name=phone-number]');
+    var question = form.querySelector('[name=question]');
 
-    form.addEventListener("submit", function () {
+    form.addEventListener('submit', function () {
       if (isStorageSupport) {
-        localStorage.setItem("name", name.value);
-        localStorage.setItem("phone", phone.value);
-        localStorage.setItem("question", question.value);
+        localStorage.setItem('name', name.value);
+        localStorage.setItem('phone', phone.value);
+        localStorage.setItem('question', question.value);
       }
     });
   });
@@ -100,25 +100,33 @@ var isClickOutside = function (evt, cssSelector) {
 
 var onSuccessWindowOutsideCLick = function (evt) {
   if (isClickOutside(evt, '.modal__form')) {
-    popup.classList.remove("modal--js-show");
-    body.style.overflow="auto";
+    popup.classList.remove('modal--js-show');
+    body.style.overflow = 'auto';
   }
 };
 
 
-//Скроллер
-var ScrollButtons = document.querySelectorAll(".button--js-scroll");
-var formSection = "form--js";
+// Скроллер
+// var ScrollButtons = document.querySelectorAll('.button--js-scroll');
+var scrollToFormButton = document.querySelector('.js-scroll-to-form');
+var scrollToAdvantagesButton = document.querySelector('.js-scroll-to-advantages');
+var formSection = 'js-form-position';
+var advantagesSection = 'js-advantages-position';
 
 
 var currentYPosition = function () {
   // Firefox, Chrome, Opera, Safari
-  if (self.pageYOffset) return self.pageYOffset;
+  if (self.pageYOffset) {
+    return self.pageYOffset;
+  }
   // Internet Explorer 6 - standards mode
-  if (document.documentElement && document.documentElement.scrollTop)
+  if (document.documentElement && document.documentElement.scrollTop) {
     return document.documentElement.scrollTop;
+  }
   // Internet Explorer 6, 7 and 8
-  if (document.body.scrollTop) return document.body.scrollTop;
+  if (document.body.scrollTop) {
+    return document.body.scrollTop;
+  }
   return 0;
 };
 
@@ -142,33 +150,39 @@ var smoothScroll = function (eID) {
     return;
   }
   var speed = Math.round(distance / 100);
-  if (speed >= 10) speed = 30;
+  if (speed >= 10) {
+    speed = 30;
+  }
   var step = Math.round(distance / 25);
   var leapY = stopY > startY ? startY + step : startY - step;
   var timer = 0;
   if (stopY > startY) {
     for (var i = startY; i < stopY; i += step) {
-      setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+      setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
       leapY += step;
-      if (leapY > stopY) leapY = stopY;
+      if (leapY > stopY) {
+        leapY = stopY;
+      }
       timer++;
     }
     return;
   }
   for (var i = startY; i > stopY; i -= step) {
-    setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+    setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
     leapY -= step;
-    if (leapY < stopY) leapY = stopY;
+    if (leapY < stopY) {
+      leapY = stopY;
+    }
     timer++;
   }
 };
 
-var scrollSetup = function (scrollInputs, scrollDestination) {
-  scrollInputs.forEach(function (scrollButton) {
+var scrollSetup = function (scrollButton, scrollDestination) {
+  // scrollInputs.forEach(function (scrollButton) {
     scrollButton.addEventListener('click', function () {
       smoothScroll(scrollDestination);
     });
-  });
+  // });
 };
 
 
@@ -200,34 +214,35 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
 // Исполнение
 
 accordionSetup();
-scrollSetup(ScrollButtons, formSection);
+scrollSetup(scrollToFormButton, formSection);
+scrollSetup(scrollToAdvantagesButton, advantagesSection);
 phoneValidationSetup(PhoneInputs, phoneMask);
 inputsSetup(NameInputs, PhoneInputs, QuestionInputs, Forms);
 
 
 popup.addEventListener('click', onSuccessWindowOutsideCLick);
 
-modalButton.addEventListener("click", function (evt) {
+modalButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.add("modal--js-show");
-  body.style.overflow="hidden";
+  popup.classList.add('modal--js-show');
+  body.style.overflow = 'hidden';
   if (nameInput) {
     nameInput.focus();
   }
 });
 
-closeModalButton.addEventListener("click", function (evt) {
+closeModalButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.remove("modal--js-show");
-  body.style.overflow="auto";
+  popup.classList.remove('modal--js-show');
+  body.style.overflow = 'auto';
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popup.classList.contains("modal--js-show")) {
-      popup.classList.remove("modal--js-show");
-      body.style.overflow="auto";
+    if (popup.classList.contains('modal--js-show')) {
+      popup.classList.remove('modal--js-show');
+      body.style.overflow = 'auto';
     }
   }
 });
