@@ -23,6 +23,7 @@ var accordionSetup = function (buttons) {
 };
 
 // Форма
+var ESC_KEY_CODE = 27;
 var isStorageSupport = true;
 var nameStorage = '';
 var phoneStorage = '';
@@ -242,7 +243,7 @@ closeModalButton.addEventListener('click', function (evt) {
 });
 
 window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
+  if (evt.keyCode === ESC_KEY_CODE) {
     evt.preventDefault();
     if (popup.classList.contains('js--modal--show')) {
       hideModal();
