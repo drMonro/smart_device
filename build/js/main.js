@@ -24,9 +24,9 @@ var accordionSetup = function () {
 
 // Форма
 var isStorageSupport = true;
-var name_storage = '';
-var phone_storage = '';
-var question_storage = '';
+var nameStorage = '';
+var phoneStorage = '';
+var questionStorage = '';
 var popup = document.querySelector('.modal');
 var body = document.querySelector('body');
 var modalButton = document.querySelector('.page-header__button');
@@ -39,19 +39,19 @@ var Forms = document.querySelectorAll('form');
 
 
 try {
-  name_storage = localStorage.getItem('name');
+  nameStorage = localStorage.getItem('name');
 } catch (err) {
   isStorageSupport = false;
 }
 
 try {
-  phone_storage = localStorage.getItem('phone-number');
+  phoneStorage = localStorage.getItem('phone-number');
 } catch (err) {
   isStorageSupport = false;
 }
 
 try {
-  question_storage = localStorage.getItem('question');
+  questionStorage = localStorage.getItem('question');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -59,20 +59,20 @@ try {
 
 var inputsSetup = function (nameInputs, phoneInputs, questionInputs, forms) {
   nameInputs.forEach(function (nameInput) {
-    if (name_storage) {
-      nameInput.value = name_storage;
+    if (nameStorage) {
+      nameInput.value = nameStorage;
     }
   });
 
   phoneInputs.forEach(function (phoneInput) {
-    if (phone_storage) {
-      phoneInput.value = phone_storage;
+    if (phoneStorage) {
+      phoneInput.value = phoneStorage;
     }
   });
 
   questionInputs.forEach(function (questionInput) {
-    if (question_storage) {
-      questionInput.value = question_storage;
+    if (questionStorage) {
+      questionInput.value = questionStorage;
     }
   });
 
@@ -179,9 +179,9 @@ var smoothScroll = function (eID) {
 
 var scrollSetup = function (scrollButton, scrollDestination) {
   // scrollInputs.forEach(function (scrollButton) {
-    scrollButton.addEventListener('click', function () {
-      smoothScroll(scrollDestination);
-    });
+  scrollButton.addEventListener('click', function () {
+    smoothScroll(scrollDestination);
+  });
   // });
 };
 
