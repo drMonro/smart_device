@@ -2,21 +2,21 @@
 
 // Аккордеон
 
-var AccordionCheckBoxes = document.querySelectorAll('.accordion__button');
+var AccordionButtons = document.querySelectorAll('.accordion__button');
 
-var accordionSetup = function () {
-  AccordionCheckBoxes.forEach(function (checkbox) {
-    checkbox.addEventListener('click', function (evt) {
+var accordionSetup = function (buttons) {
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function (evt) {
       evt.preventDefault();
-      if (checkbox.closest('.accordion__button').classList.contains('accordion__button-active')) {
-        AccordionCheckBoxes.forEach(function (accordion) {
+      if (button.closest('.accordion__button').classList.contains('accordion__button-active')) {
+        buttons.forEach(function (accordion) {
           accordion.classList.remove('accordion__button-active');
         });
       } else {
-        AccordionCheckBoxes.forEach(function (accordion) {
+        buttons.forEach(function (accordion) {
           accordion.classList.remove('accordion__button-active');
         });
-        checkbox.classList.add('accordion__button-active');
+        button.classList.add('accordion__button-active');
       }
     });
   });
@@ -57,7 +57,7 @@ try {
 }
 
 
-var inputsSetup = function (nameInputs, phoneInputs, questionInputs, forms) {
+var formsSetup = function (nameInputs, phoneInputs, questionInputs, forms) {
   nameInputs.forEach(function (inputName) {
     if (nameStorage) {
       inputName.value = nameStorage;
@@ -113,7 +113,6 @@ var onSuccessWindowOutsideCLick = function (evt) {
     hideModal();
   }
 };
-
 
 // Скроллер
 var scrollToFormButton = document.querySelector('.js-scroll-to-form');
@@ -193,7 +192,6 @@ var scrollSetup = function (scrollButton, scrollDestination) {
   });
 };
 
-
 // Валидация телефона
 var IMask;
 var phoneBeginning = '+7(';
@@ -208,6 +206,7 @@ var phoneMask = {
     }
   }
 };
+
 var phoneValidationSetup = function (phoneInputs, inputMask) {
   phoneInputs.forEach(function (phoneInput) {
     var cellularPhone = new IMask(phoneInput, inputMask);
@@ -221,12 +220,11 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
 
 // Исполнение
 
-accordionSetup();
+accordionSetup(AccordionButtons);
 scrollSetup(scrollToFormButton, formSectionID);
 scrollSetup(scrollToAdvantagesButton, advantagesSectionID);
 phoneValidationSetup(PhoneInputs, phoneMask);
-inputsSetup(NameInputs, PhoneInputs, QuestionInputs, Forms);
-
+formsSetup(NameInputs, PhoneInputs, QuestionInputs, Forms);
 
 popup.addEventListener('click', onSuccessWindowOutsideCLick);
 
