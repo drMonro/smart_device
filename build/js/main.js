@@ -58,9 +58,9 @@ try {
 
 
 var inputsSetup = function (nameInputs, phoneInputs, questionInputs, forms) {
-  nameInputs.forEach(function (nameInput) {
+  nameInputs.forEach(function (inputName) {
     if (nameStorage) {
-      nameInput.value = nameStorage;
+      inputName.value = nameStorage;
     }
   });
 
@@ -134,7 +134,7 @@ var elmYPosition = function (eID) {
   var elm = document.getElementById(eID);
   var y = elm.offsetTop;
   var node = elm;
-  while (node.offsetParent && node.offsetParent != document.body) {
+  while (node.offsetParent && node.offsetParent !== document.body) {
     node = node.offsetParent;
     y += node.offsetTop;
   }
@@ -158,7 +158,8 @@ var smoothScroll = function (eID) {
   var timer = 0;
   if (stopY > startY) {
     for (var i = startY; i < stopY; i += step) {
-      setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
+      var bottomScrollHandler = 'window.scrollTo(0, ' + leapY + ')';
+      setTimeout(bottomScrollHandler, timer * speed);
       leapY += step;
       if (leapY > stopY) {
         leapY = stopY;
@@ -167,8 +168,9 @@ var smoothScroll = function (eID) {
     }
     return;
   }
-  for (var i = startY; i > stopY; i -= step) {
-    setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
+  for (var j = startY; j > stopY; j -= step) {
+    var topScrollHandler = 'window.scrollTo(0, ' + leapY + ')';
+    setTimeout(topScrollHandler, timer * speed);
     leapY -= step;
     if (leapY < stopY) {
       leapY = stopY;
@@ -178,16 +180,14 @@ var smoothScroll = function (eID) {
 };
 
 var scrollSetup = function (scrollButton, scrollDestination) {
-  // scrollInputs.forEach(function (scrollButton) {
   scrollButton.addEventListener('click', function () {
     smoothScroll(scrollDestination);
   });
-  // });
 };
 
 
 // Валидация телефона
-
+var IMask;
 var phoneBeginning = '+7(';
 var phoneMask = {
   mask: '+7(CCC)NNNNNNN',
