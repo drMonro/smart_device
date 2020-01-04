@@ -177,12 +177,12 @@ var smoothScroll = function (eID) {
   }
 };
 
-var scrollSetup = function (scrollInputs, scrollDestination) {
-  scrollInputs.forEach(function (scrollButton) {
-    scrollButton.addEventListener('click', function () {
-      smoothScroll(scrollDestination);
-    });
+var scrollSetup = function (scrollButton, scrollDestination) {
+  // scrollInputs.forEach(function (scrollButton) {
+  scrollButton.addEventListener('click', function () {
+    smoothScroll(scrollDestination);
   });
+  // });
 };
 
 
