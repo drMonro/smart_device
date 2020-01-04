@@ -91,6 +91,16 @@ var inputsSetup = function (nameInputs, phoneInputs, questionInputs, forms) {
   });
 };
 
+var showModal = function () {
+  popup.classList.add('js--modal--show');
+  body.classList.add('js-body-overflow');
+};
+
+var hideModal = function () {
+  popup.classList.remove('js--modal--show');
+  body.classList.remove('js-body-overflow');
+};
+
 
 var isClickOutside = function (evt, cssSelector) {
   var target = evt.target;
@@ -100,18 +110,16 @@ var isClickOutside = function (evt, cssSelector) {
 
 var onSuccessWindowOutsideCLick = function (evt) {
   if (isClickOutside(evt, '.modal__form')) {
-    popup.classList.remove('modal--js-show');
-    body.style.overflow = 'auto';
+    hideModal();
   }
 };
 
 
 // Скроллер
-// var ScrollButtons = document.querySelectorAll('.button--js-scroll');
 var scrollToFormButton = document.querySelector('.js-scroll-to-form');
 var scrollToAdvantagesButton = document.querySelector('.js-scroll-to-advantages');
-var formSection = 'js-form-position';
-var advantagesSection = 'js-advantages-position';
+var formSectionID = 'js-form-position';
+var advantagesSectionID = 'js-advantages-position';
 
 
 var currentYPosition = function () {
@@ -214,8 +222,8 @@ var phoneValidationSetup = function (phoneInputs, inputMask) {
 // Исполнение
 
 accordionSetup();
-scrollSetup(scrollToFormButton, formSection);
-scrollSetup(scrollToAdvantagesButton, advantagesSection);
+scrollSetup(scrollToFormButton, formSectionID);
+scrollSetup(scrollToAdvantagesButton, advantagesSectionID);
 phoneValidationSetup(PhoneInputs, phoneMask);
 inputsSetup(NameInputs, PhoneInputs, QuestionInputs, Forms);
 
@@ -224,8 +232,7 @@ popup.addEventListener('click', onSuccessWindowOutsideCLick);
 
 modalButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.add('modal--js-show');
-  body.style.overflow = 'hidden';
+  showModal();
   if (nameInput) {
     nameInput.focus();
   }
@@ -233,16 +240,14 @@ modalButton.addEventListener('click', function (evt) {
 
 closeModalButton.addEventListener('click', function (evt) {
   evt.preventDefault();
-  popup.classList.remove('modal--js-show');
-  body.style.overflow = 'auto';
+  hideModal();
 });
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popup.classList.contains('modal--js-show')) {
-      popup.classList.remove('modal--js-show');
-      body.style.overflow = 'auto';
+    if (popup.classList.contains('js--modal--show')) {
+      hideModal();
     }
   }
 });
