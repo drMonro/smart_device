@@ -141,6 +141,10 @@
     }
   }
 
+  .accordion--first ul {
+    min-height: 190px;
+  }
+
   .accordion--second {
     & ul {
       margin-top: 11px;
