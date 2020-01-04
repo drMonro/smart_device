@@ -180,11 +180,9 @@ var smoothScroll = function (eID) {
 };
 
 var scrollSetup = function (scrollButton, scrollDestination) {
-  // scrollInputs.forEach(function (scrollButton) {
   scrollButton.addEventListener('click', function () {
     smoothScroll(scrollDestination);
   });
-  // });
 };
 
 
