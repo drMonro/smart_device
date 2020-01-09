@@ -78,12 +78,13 @@
 .page-footer__left-bottom-content {
   display: flex;
   justify-content: flex-end;
-  padding-right: 6.1%;
-  padding-left: 20px;
+  position: relative;
+  padding-right: 40.8%;
 
   & span {
-    right: -77px;
-    position: relative;
+    left: 70.5%;
+    width: 100%;
+    position: absolute;
     display: inline-block;
   }
 }
@@ -102,8 +103,8 @@
 }
 
 .page-footer__middle-bottom-content {
-  padding-left: 27%;
-  padding-right: 14%;
+  padding-left: 177px;
+  padding-right: 0;
 }
 
 .page-footer__right-bottom-content {
