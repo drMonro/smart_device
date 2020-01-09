@@ -238,8 +238,10 @@ modalButton.addEventListener('click', function (evt) {
 });
 
 closeModalButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  hideModal();
+  if (closeModalButton) {
+    evt.preventDefault();
+    hideModal();
+  }
 });
 
 window.addEventListener('keydown', function (evt) {

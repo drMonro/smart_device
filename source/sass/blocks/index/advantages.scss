@@ -76,11 +76,12 @@
   }
 }
 
-.advantages__list-wrapper--top {
+.advantages__list-wrapper {
   position: relative;
   z-index: 1;
 
-  & ul::before {
+  & ul::before,
+  & ul::after {
     position: absolute;
     z-index: -1;
     content: "";
@@ -91,22 +92,15 @@
     left: -172px;
     top: -66px;
   }
-}
 
-.advantages__list-wrapper--bottom {
-  & ul::before {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    width: 224px;
-    height: 257px;
-    background-image: url("../img/advantages-triangle.svg");
-    background-size: cover;
-    right: -24.8%;
-    top: -12px;
+  & ul::after {
+    left: auto;
+    right: -291px;
+    top: 318px;
     transform: rotate(60deg);
   }
 }
+
 
 @media (max-width: $desktop-width) {
   .advantages {
