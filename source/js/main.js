@@ -31,7 +31,7 @@ var questionStorage = '';
 var popup = document.querySelector('.modal');
 var body = document.querySelector('body');
 var modalButton = document.querySelector('.page-header__button');
-var closeModalButton = popup.querySelector('.modal__close-button');
+var closeModalButton = document.querySelector('.modal__close-button');
 var nameInput = document.getElementById('name');
 var PhoneInputs = document.querySelectorAll('[name=phone-number]');
 var NameInputs = document.querySelectorAll('[name=name]');
@@ -188,9 +188,12 @@ var smoothScroll = function (eID) {
 };
 
 var scrollSetup = function (scrollButton, scrollDestination) {
-  scrollButton.addEventListener('click', function () {
-    smoothScroll(scrollDestination);
-  });
+  if (scrollButton) {
+    scrollButton.addEventListener('click', function () {
+      smoothScroll(scrollDestination);
+    });
+  }
+
 };
 
 // Валидация телефона
@@ -227,22 +230,29 @@ scrollSetup(scrollToAdvantagesButton, advantagesSectionID);
 phoneValidationSetup(PhoneInputs, phoneMask);
 formsSetup(NameInputs, PhoneInputs, QuestionInputs, Forms);
 
-popup.addEventListener('click', onSuccessWindowOutsideCLick);
 
-modalButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  showModal();
-  if (nameInput) {
-    nameInput.focus();
-  }
-});
+if (popup) {
+  popup.addEventListener('click', onSuccessWindowOutsideCLick);
+}
 
-closeModalButton.addEventListener('click', function (evt) {
-  if (closeModalButton) {
+
+if (modalButton) {
+  modalButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    showModal();
+    if (nameInput) {
+      nameInput.focus();
+    }
+  });
+}
+
+if (closeModalButton) {
+  closeModalButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     hideModal();
-  }
-});
+  });
+}
+
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === ESC_KEY_CODE) {

@@ -8,6 +8,9 @@
 }
 
 .advantages__list-wrapper {
+  position: relative;
+  z-index: 1;
+
   & ul {
     position: relative;
     display: flex;
@@ -16,6 +19,27 @@
     padding: 0;
     max-width: 1170px;
     margin: 0 auto;
+  }
+
+
+  & ul::before,
+  & ul::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 224px;
+    height: 257px;
+    background-image: url("../img/advantages-triangle.svg");
+    background-size: cover;
+    left: -172px;
+    top: -66px;
+  }
+
+  & ul::after {
+    left: auto;
+    right: -291px;
+    top: 318px;
+    transform: rotate(60deg);
   }
 
   & svg {
@@ -75,32 +99,6 @@
     margin: 0;
   }
 }
-
-.advantages__list-wrapper {
-  position: relative;
-  z-index: 1;
-
-  & ul::before,
-  & ul::after {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    width: 224px;
-    height: 257px;
-    background-image: url("../img/advantages-triangle.svg");
-    background-size: cover;
-    left: -172px;
-    top: -66px;
-  }
-
-  & ul::after {
-    left: auto;
-    right: -291px;
-    top: 318px;
-    transform: rotate(60deg);
-  }
-}
-
 
 @media (max-width: $desktop-width) {
   .advantages {
