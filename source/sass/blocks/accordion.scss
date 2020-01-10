@@ -28,8 +28,8 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
+    column-count: 2;
+    margin-bottom: 58px;
   }
 
   & li,
@@ -48,14 +48,15 @@
 }
 
 .accordion--first {
-  & li {
-    width: 36%;
+  & ul {
+    width: 92%;
   }
 
-  & li:nth-child(odd) {
-    margin-right: 10.7%;
+  & li {
+    margin-right: 20px;
     min-width: 234px;
   }
+
 }
 
 .accordion--second {
@@ -63,6 +64,7 @@
   display: block;
 
   & ul {
+    column-count: 1;
     height: auto;
   }
 
@@ -79,6 +81,11 @@
 
 @media (max-width: $desktop-width) {
   .accordion {
+    & ul {
+      column-count: 1;
+      margin-bottom: 36px;
+    }
+
     & .accordion__list-wrapper {
       width: 357px;
     }
