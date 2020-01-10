@@ -36,28 +36,28 @@
 
 
 .logo--page-footer {
-  width: 100%;
-  display: block;
-  max-width: 217px;
+  //width: 100%;
+  //display: block;
+  width: 216px;
   //flex-wrap: wrap;
-  padding-bottom: 47px;
-  position: relative;
-  left: 3%;
+  //padding-bottom: 47px;
+  //position: relative;
+  //left: 3%;
 
-  & svg {
-    margin-right: 3.4%;
-  }
+  //& svg {
+  //  margin-right: 3.4%;
+  //}
 
   & p {
     color: #203c42;
   }
 
-  & .logo__text-wrapper {
-    width: 148px;
-    display: inline-block;
-    position: relative;
-    top: -6px;
-  }
+  //& .logo__text-wrapper {
+  //  width: 148px;
+  //  display: inline-block;
+  //  position: relative;
+  //  top: -6px;
+  //}
 }
 
 @media (max-width: $desktop-width) {
@@ -88,7 +88,7 @@
     max-width: 100%;
 
     & .logo__text-wrapper {
-      position: static;
+      display: block;
     }
 
     & svg {

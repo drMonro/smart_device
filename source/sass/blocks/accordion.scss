@@ -12,7 +12,7 @@
     margin-bottom: 26px;
     border: none;
     background-color: transparent;
-    width: 100%;
+    width: auto;
     text-align: left;
   }
 
@@ -21,7 +21,7 @@
   }
 
   & .accordion__list-wrapper {
-    box-sizing: border-box;
+    //box-sizing: border-box;
   }
 
   & ul {
@@ -48,8 +48,10 @@
 }
 
 .accordion--first {
+  width: 66%;
+
   & ul {
-    width: 92%;
+    min-width: 500px;
   }
 
   & li {
@@ -58,8 +60,7 @@
 }
 
 .accordion--second {
-  width: 100%;
-  display: block;
+  width: 34%;
 
   & ul {
     column-count: 1;
@@ -80,31 +81,56 @@
 @media (max-width: $desktop-width) {
   .accordion {
     & ul {
+      margin-bottom: 0;
       column-count: 1;
-      margin-bottom: 36px;
     }
 
     & .accordion__list-wrapper {
       width: 357px;
     }
   }
+
+  .accordion--first,
+  .accordion--second {
+    width: 50%;
+  }
+
+  .accordion--first {
+    width: 52%;
+
+    & ul {
+      min-width: auto;
+    }
+  }
+
+  .accordion--second {
+    width: 48%;
+  }
+
 }
 
 @media (max-width: $tablet-width) {
   .accordion {
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+    border-top: 1px solid rgba(98, 105, 98, 0.2);
+
     & .accordion__list-wrapper {
       width: 250px;
-      padding-left: 5px;
+      padding-left: 15px;
     }
 
     & ul {
-      min-height: auto;
+      margin-bottom: 25px;
+      margin-top: 6px;
     }
 
     & button {
-      padding: 1px 6px;
+      width: 100%;
       position: relative;
-      margin-bottom: 24px;
+      margin-bottom: 0;
+      padding-top: 28px;
+      padding-bottom: 28px;
+      padding-left: 15px;
     }
 
     & button::after,
@@ -126,7 +152,7 @@
       width: 16px;
       height: 16px;
       right: 5.5%;
-      top: 100%;
+      top: 43px;
       background-image: url("../img/minus.svg");
       background-repeat: no-repeat;
     }
@@ -149,13 +175,22 @@
     }
   }
 
-  .accordion--first ul {
-    min-height: 190px;
+  .accordion--first {
+    width: 100%;
+
+    & ul {
+      min-height: 190px;
+    }
+
   }
 
+
   .accordion--second {
-    & ul {
-      margin-top: 11px;
-    }
+    border-top: none;
+    width: 100%;
+
+    //& ul {
+    //  margin-top: 11px;
+    //}
   }
 }
