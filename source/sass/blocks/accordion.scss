@@ -24,7 +24,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    column-count: 2;
+
     margin-bottom: 58px;
   }
 
@@ -47,6 +47,7 @@
   width: 66%;
 
   & ul {
+    column-count: 2;
     min-width: 500px;
   }
 
@@ -59,18 +60,12 @@
   width: 34%;
 
   & ul {
-    column-count: 1;
     height: auto;
   }
 
   & li {
     width: 100%;
     margin: 0;
-  }
-
-
-  & .accordion__list-wrapper {
-    width: auto;
   }
 }
 
@@ -79,19 +74,14 @@
     & ul {
       width: 357px;
       margin-bottom: 0;
-      column-count: 1;
     }
-  }
-
-  .accordion--first,
-  .accordion--second {
-    width: 50%;
   }
 
   .accordion--first {
     width: 52%;
 
     & ul {
+      column-count: 1;
       min-width: auto;
     }
   }
